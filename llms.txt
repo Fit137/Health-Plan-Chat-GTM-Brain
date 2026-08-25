@@ -58,10 +58,12 @@
 
 ## Adapters — one door per tool
 
+- [adapters/INSTALL.md](adapters/INSTALL.md): The install guide for every agent that is not Claude Code. Three patterns, exact paths, and the test that proves an adapter loaded.
 - [adapters/cursor.mdc](adapters/cursor.mdc): Cursor rule.
 - [adapters/windsurf.md](adapters/windsurf.md): Windsurf rule.
 - [adapters/copilot-instructions.md](adapters/copilot-instructions.md): GitHub Copilot instructions.
 - [adapters/GEMINI.md](adapters/GEMINI.md): Gemini pointer.
+- [adapters/generic-rule-file.md](adapters/generic-rule-file.md): The same body, unnamed, for Cline, Roo Code, Continue, Junie and anything else wanting its own rule file.
 - [adapters/portable-control-layer.md](adapters/portable-control-layer.md): **Dated.** For a chat model with no file access. Regenerate whenever a ledger changes.
 
 ## Sources
