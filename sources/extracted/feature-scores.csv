@@ -1,0 +1,26 @@
+id,feature,layer,layer_name,demand_label,competitiveness_label,demand_score,competitiveness_score,quadrant,source_sheet_competitiveness,adjusted_vs_sheet
+1,24/7 AI voice answering for inbound calls,1,L1 Commodity AI,Wanted by All,Commodity: should be free,18.6,-14.2,Q2 Table Stakes,Most vendors can do this,yes
+2,Natural conversational voice interaction,1,L1 Commodity AI,Wanted by All,Commodity: should be free,17.8,-12.7,Q2 Table Stakes,Most vendors can do this,yes
+3,AI chatbot for website/portal,1,L1 Commodity AI,Wanted by Some,Commodity: should be free,-3.7,-15.4,Q4 Supporting / Hygiene,Most vendors can do this,yes
+4,Handles multiple calls simultaneously,1,L1 Commodity AI,Wanted by Most,Commodity: should be free,11.6,-13.1,Q2 Table Stakes,Most vendors can do this,yes
+5,Warm transfer/escalation to human agent,1,L1 Commodity AI,Wanted by All,Most vendors can do this,18.2,-8.4,Q2 Table Stakes,Most vendors can do this,no
+6,After-hours lead capture,2,L2 Insurance Workflow,Wanted by All,Commodity: should be free,17.4,-10.6,Q2 Table Stakes,Most vendors can do this,yes
+7,Lead qualification before agent handoff,2,L2 Insurance Workflow,Wanted by Most,Most vendors can do this,14.9,-6.2,Q2 Table Stakes,Most vendors can do this,no
+8,Call transcription & conversation summaries,1,L1 Commodity AI,Wanted by Most,Most vendors can do this,12.3,-9.7,Q2 Table Stakes,Most vendors can do this,no
+9,Structured caller information captured for agent,2,L2 Insurance Workflow,Wanted by Most,Most vendors can do this,11.4,-5.8,Q2 Table Stakes,Most vendors can do this,no
+10,Answers Medicare plan-specific questions,3,L3 Medicare Plan IP,Wanted by All,Unique to us,19.2,14.6,Q1 Strategic Differentiator,Unique to US: Only we can do this,no
+11,Understands plan benefits from plan documents,3,L3 Medicare Plan IP,Wanted by All,Unique to us,16.3,11.7,Q1 Strategic Differentiator,Unique to US: Only we can do this,softened
+12,"Answers benefits: dental, vision, hearing, transportation, OTC/flex",3,L3 Medicare Plan IP,Wanted by All,Unique to us,19.4,15.9,Q1 Strategic Differentiator,Unique to US: Only we can do this,no
+13,Plan-specific premium/copay/cost-sharing questions,3,L3 Medicare Plan IP,Wanted by All,Unique to us,17.6,13.4,Q1 Strategic Differentiator,Unique to US: Only we can do this,no
+14,Compare benefits across Medicare plans,3,L3 Medicare Plan IP,Wanted by Most,A few others can do this,12.8,6.9,Q1 Strategic Differentiator,Unique to US: Only we can do this,yes
+15,AI trained on your agency and the Medicare plans you sell,3,L3 Medicare Plan IP,Wanted by Most,Unique to us,13.7,17.1,Q1 Strategic Differentiator,Unique to US: Only we can do this,no
+16,Agency-branded AI voice agent,1,L1 Commodity AI,Wanted by Most,Most vendors can do this,10.4,-3.6,Q2 Table Stakes,A few others can do this,yes
+17,Agency-branded AI chatbot,1,L1 Commodity AI,Wanted by Most,Most vendors can do this,8.7,-7.3,Q4 Supporting / Hygiene,A few others can do this,yes
+18,Embed chatbot into agency's existing website,1,L1 Commodity AI,Wanted by Most,Commodity: should be free,9.6,-10.9,Q4 Supporting / Hygiene,A few others can do this,yes
+19,Complete website + chat + voice package for small agencies,2,L2 Insurance Workflow,Wanted by Some,A few others can do this,-5.2,8.2,Q3 Niche / Strategic Bet,A few others can do this,no
+20,CRM integration / lead handoff,1,L1 Commodity AI,Wanted by Most,Most vendors can do this,15.8,-8.9,Q2 Table Stakes,Most vendors can do this,no
+21,Call analytics/dashboard,1,L1 Commodity AI,Wanted by Most,Commodity: should be free,9.3,-12.6,Q4 Supporting / Hygiene,Most vendors can do this,yes
+22,Multilingual support,1,L1 Commodity AI,Wanted by Most,Most vendors can do this,11.9,-4.7,Q2 Table Stakes,Most vendors can do this,no
+23,Custom agency knowledge base,1,L1 Commodity AI,Wanted by Most,Most vendors can do this,10.8,-2.4,Q2 Table Stakes,Most vendors can do this,no
+24,Appointment/callback scheduling (Coming Soon),1,L1 Commodity AI,Wanted by Most,Most vendors can do this,14.1,-9.2,Q2 Table Stakes,Most vendors can do this,no
+25,Centralized deployment across agencies/downlines (Coming Soon),2,L2 Insurance Workflow,Wanted by Some/FMO,Unique to us,-8.6,17.4,Q3 Niche / Strategic Bet,Potential differentiator,yes

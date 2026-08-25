@@ -1,0 +1,70 @@
+# Health Plan Chat — Go-to-Market Brain
+
+> The single source of truth for Health Plan Chat's go-to-market: a consumer-facing AI
+> voice and chat agent for independent Medicare insurance agencies, trained on the
+> specific Medicare plans each agency sells. Pre-revenue, Sprint 1.
+> Read `status_notes` in the master context before assuming anything.
+
+## Routers — start here
+
+- [CLAUDE.md](CLAUDE.md): Load order, the audience split, the non-negotiables. Authoritative.
+- [AGENTS.md](AGENTS.md): The same, for Codex, Cursor, Zed, opencode and anything reading AGENTS.md.
+- [README.md](README.md): What this repository is, for a human.
+
+## Control layer — load on every writing task
+
+- [context/HealthPlanChat_GTM_Master_Context.md](context/HealthPlanChat_GTM_Master_Context.md): The distilled source of truth, 16 sections. Section 15 is the twenty most looked-up facts.
+- [rules/glossary.md](rules/glossary.md): Canonical vocabulary, banned near-synonyms, and the distinctions that must never blur.
+- [rules/feature-status.md](rules/feature-status.md): Every capability with a status flag. Shortest staleness fuse in the brain.
+- [rules/do-not-say.md](rules/do-not-say.md): Claim hygiene. Hard bans, channel bans, claims needing scoping, each with its safe form.
+- [rules/writing-rules.md](rules/writing-rules.md): Mechanics, tone, writing for the ear, claim and channel discipline, signature lines.
+
+## Reference layer — load on demand
+
+- [reference/feature-matrix.md](reference/feature-matrix.md): What leads messaging and what is entry cost. The layer-quadrant finding.
+- [reference/positioning.md](reference/positioning.md): The four vectors, which two we lead, and the condition governing all of it.
+- [reference/positioning-verdict.md](reference/positioning-verdict.md): The strategic fork that was settled, and why. Includes the counter-argument.
+- [reference/competitive-analysis.md](reference/competitive-analysis.md): Market shape, the price wedge, where we are weakest, three open questions.
+- [reference/competitor-battlecards.md](reference/competitor-battlecards.md): Per rival: real strength, real gap, how we win.
+- [reference/icp-personas.md](reference/icp-personas.md): Both ICPs, buying committees at three levels, the design partner profile.
+- [reference/value-proposition-icp1.md](reference/value-proposition-icp1.md): Brand promise, three pillars, nine reasons to believe, which pillar to lead with.
+- [reference/value-proposition-icp2.md](reference/value-proposition-icp2.md): The downline promise, who to sell to in order, the commercial frame.
+- [reference/customer-journey.md](reference/customer-journey.md): Seven stages, both funnels, the three exposures, the seasonal constraint.
+- [reference/objection-handling.md](reference/objection-handling.md): The recurring pushbacks and the honest answers, including the two with no good answer yet.
+- [reference/marketing-campaigns.md](reference/marketing-campaigns.md): Six demand drivers, seven campaigns, the driver-by-channel mapping, build order.
+- [reference/outbound-engine.md](reference/outbound-engine.md): The channel this GTM runs on. Thesis, archetypes, hooks, what good looks like.
+- [reference/pricing-model.md](reference/pricing-model.md): **Internal only.** How the price was derived. Nothing here is cleared for external use.
+
+## Execution layer
+
+- [templates/cold-outreach-icp1.md](templates/cold-outreach-icp1.md): Four-touch sequence. Gap Report pre-run is a precondition.
+- [templates/linkedin-outreach-icp2.md](templates/linkedin-outreach-icp2.md): Connection note plus three touches, for Directors of Operations and principals.
+- [templates/landing-page.md](templates/landing-page.md): Nine-section structure. The demonstration is the page's job.
+- [templates/community-post.md](templates/community-post.md): Ungated value, disclosed affiliation.
+- [templates/nurture-email.md](templates/nurture-email.md): Two sequence arcs, six for ICP-1 and eight for ICP-2. Never merged.
+- [examples/cold-outreach-icp1-approved.md](examples/cold-outreach-icp1-approved.md): The ICP-1 voice reference, annotated with why it works and what was cut.
+- [examples/linkedin-icp2-approved.md](examples/linkedin-icp2-approved.md): The ICP-2 voice reference. Note how little it shares with the ICP-1 example.
+- [prompts/common-tasks.md](prompts/common-tasks.md): Filled, runnable prompts for the eight recurring jobs.
+
+## State layer — what makes this compound
+
+- [ops/decisions.md](ops/decisions.md): Eight settled decisions with rationale and what each did not change, plus the open questions owned elsewhere.
+- [ops/signal-log.md](ops/signal-log.md): Raw market input, corroboration thresholds, and what to watch for first.
+- [ops/copy-bank.md](ops/copy-bank.md): Approved language, reusable verbatim. The closed set of proof points. Retired phrases and why.
+- [ops/QA-checklist.md](ops/QA-checklist.md): The pre-ship gate, grouped and tickable. The three that fail most often.
+- [ops/asset-index.md](ops/asset-index.md): Source manifest, conflicts found and how they were resolved, product surfaces, channel status.
+- [ops/review-cadence.md](ops/review-cadence.md): Who reviews what, how often, staleness thresholds, and the seasonal adjustment.
+- [snapshots/2026-08-25-sprint-1-build.md](snapshots/2026-08-25-sprint-1-build.md): The baseline. Product, funnel, competitive and calendar position on build day.
+
+## Adapters — one door per tool
+
+- [adapters/cursor.mdc](adapters/cursor.mdc): Cursor rule.
+- [adapters/windsurf.md](adapters/windsurf.md): Windsurf rule.
+- [adapters/copilot-instructions.md](adapters/copilot-instructions.md): GitHub Copilot instructions.
+- [adapters/GEMINI.md](adapters/GEMINI.md): Gemini pointer.
+- [adapters/portable-control-layer.md](adapters/portable-control-layer.md): **Dated.** For a chat model with no file access. Regenerate whenever a ledger changes.
+
+## Sources
+
+- `sources/extracted/`: The canonical Markdown and CSV. Authoritative text.
+- `sources/raw/`: The six Google-folder deliverables plus the pricing workbook, as delivered.
