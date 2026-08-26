@@ -5,7 +5,7 @@
 **One repository that holds an entire go-to-market in a form any AI agent can execute against, and any human can decide from.**
 
 ![Status](https://img.shields.io/badge/stage-Sprint%201%20·%20pre--revenue-1F2A44)
-![Files](https://img.shields.io/badge/files-60-1F4E78)
+![Files](https://img.shields.io/badge/files-62-1F4E78)
 ![Audit](https://img.shields.io/badge/audit-0%20errors-2E7D32)
 ![Format](https://img.shields.io/badge/format-Markdown%20·%20tool--neutral-6FA8DC)
 
@@ -145,6 +145,9 @@ takes a call.
 Four requirements, and any tool meeting them works: text reaches the context window, something
 triggers it, files can be opened on demand, and the model follows negative instructions.
 
+Exact paths, install commands and the four-question test that proves an adapter actually
+loaded: [`adapters/INSTALL.md`](adapters/INSTALL.md).
+
 ### Terminals and CLIs
 
 | Tool | How it loads |
@@ -152,7 +155,9 @@ triggers it, files can be opened on demand, and the model follows negative instr
 | **Claude Code** | Finds `CLAUDE.md` by itself. Nothing to configure |
 | **OpenAI Codex** | Reads `AGENTS.md` at the repo root |
 | **Gemini CLI** | Copy [`adapters/GEMINI.md`](adapters/GEMINI.md) to `GEMINI.md` |
-| **Aider · Cline · Roo · Continue · opencode** | All read `AGENTS.md` |
+| **opencode · Amp · Jules** | All read `AGENTS.md` |
+| **Aider** | Names the files in `.aider.conf.yml`. It does not pick one up on its own |
+| **Cline · Roo Code** | Copy [`adapters/generic-rule-file.md`](adapters/generic-rule-file.md) to `.clinerules/` or `.roo/rules/` |
 
 ### Editors and IDEs
 
@@ -162,6 +167,8 @@ triggers it, files can be opened on demand, and the model follows negative instr
 | **Windsurf** | Copy [`adapters/windsurf.md`](adapters/windsurf.md) to `.windsurf/rules/` |
 | **GitHub Copilot** | Copy [`adapters/copilot-instructions.md`](adapters/copilot-instructions.md) to `.github/` |
 | **Zed** | Reads `AGENTS.md` |
+| **Continue** | Copy [`adapters/generic-rule-file.md`](adapters/generic-rule-file.md) to `.continue/rules/`, with a `name` field added |
+| **JetBrains Junie** | Copy [`adapters/generic-rule-file.md`](adapters/generic-rule-file.md) to `.junie/guidelines.md` |
 
 ### Chat windows, with no file access at all
 
@@ -219,7 +226,7 @@ flowchart TD
 | [`reference/`](reference/) | 13 files: one per source, plus battlecards, objections, the channel engine | On demand |
 | [`templates/`](templates/) · [`examples/`](examples/) · [`prompts/`](prompts/) | How work gets produced fast and on-voice | Production |
 | [`ops/`](ops/) · [`snapshots/`](snapshots/) | Decisions · signals · approved copy · the pre-ship gate · cadence | State and review |
-| [`adapters/`](adapters/) | One pointer per tool, so guardrails reach everyone | Tool setup |
+| [`adapters/`](adapters/) | One pointer per tool, plus the install guide, so guardrails reach everyone | Tool setup |
 | `sources/` | The seven originals and their canonical extracts | When a claim is questioned |
 
 **Load policy in one line:** keep the always-loaded layer small and authoritative, and pull
