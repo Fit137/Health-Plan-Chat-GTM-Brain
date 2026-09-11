@@ -853,12 +853,15 @@ What follows is ranked by how hard it is to fake. The test for every column: cou
 competitor send the same sentence to a different agency by changing one word? If yes, it is
 decoration.
 
-### The one that is not an enrichment and beats all of them
+### The strongest one, and why this campaign cannot use it
 
-Call their line on a Sunday and ask a benefit question. That is D3, it is already the
-strategy, and `outbound-engine.md` says why: a cold email carrying a recording of the
-prospect's own line failing competes with nothing, because nobody else has done the work.
-Everything below either ranks the queue for that call or substitutes where it cannot be run.
+Calling their line on a Sunday and asking a benefit question is D3, and `outbound-engine.md`
+says why it wins: a cold email carrying a recording of the prospect's own line failing
+competes with nothing, because nobody else has done the work.
+
+This campaign runs email only, so it is unavailable. That is a decision about the motion,
+not a gap in the ledger, and it is recorded under the extraction prompt below. Read the rest
+of this section as substitutes for a finding rather than as ranking for a call.
 
 ### Tier one, from the company domain
 
@@ -879,8 +882,7 @@ a ranking signal for which agencies get a call first.
 
 ### The website extraction prompt
 
-One prompt, one job. It returns the five values the outreach actually consumes and nothing
-else.
+One prompt, one job. Four values, all of them consumed by the email.
 
 ```
 Research this US insurance agency website and return only what it publishes.
@@ -901,26 +903,45 @@ Rules:
 
 Return this JSON only:
 
-{"headline_plan":"","headline_carrier":"","county":"","main_phone":"","source_url":""}
+{"headline_plan":"","headline_carrier":"","county":"","source_url":""}
 
 headline_plan: one named Medicare plan product, carrier name plus product name, as
 published. "" if the site names no plan.
 headline_carrier: one carrier company name the site says it represents. "" if none.
 county: one county the site says it serves, as written. "" if none.
-main_phone: the main inbound phone number published.
 source_url: the page headline_plan came from, or headline_carrier if no plan was named.
 ```
 
-Where each value goes: `headline_plan` and `county` are the two merge fields
-`templates/cold-outreach-icp1.md` already expects. `main_phone` is what the Gap Report is
-run against, and a row without one cannot enter campaign A1 at all. `headline_carrier` is
-the fallback opener. `source_url` is the only way to tell a found plan from an invented one,
-so it stays.
+`headline_plan` and `county` are merge fields. `headline_carrier` is the fallback opener.
+`source_url` is the only thing standing between a found plan name and an invented one, and
+the invented one lands in the first line of the email, so it stays.
 
 **Rule three is the whole prompt.** A model asked what plans an agency sells will produce
 plausible plan names from training data, and a wrong plan name in the first line is worse
 than a generic opener, because this reader checks and the error is the kind only an outsider
 makes. Empty has to be an allowed answer, not a failed row.
+
+### What an email-only motion changes
+
+The sequence is cold email, reply, then appointment setting on the reply. Nobody dials the
+agency's line, which removes the phone number from this prompt and moves one load-bearing
+piece of the campaign.
+
+`templates/cold-outreach-icp1.md` opens with a precondition: the Gap Report is run before the
+first touch, and if it has not been, the asset is not campaign A1. That report is built by
+calling the line and hearing it fail. Without the call there is no recording, and the
+"nobody else has done the work" argument in `outbound-engine.md` rests on the recording.
+
+So the finding has to come from somewhere else, and that promotes one enrichment from useful
+to structural. **The county plan count becomes the finding the first email is built on.** It
+is the only tier-one column that produces a number about the prospect's own market without
+anyone picking up a phone, and a first touch with no finding in it is a generic email
+whatever is merged into it.
+
+The call to action survives intact. `outbound-engine.md` ranks "worth 15 minutes before AEP"
+third and allows it only after the prospect has engaged with a finding, which is exactly a
+reply. Appointment setting on the reply is consistent with that. Nothing here licenses
+opening with a meeting request.
 
 ### Derive, do not ask
 
