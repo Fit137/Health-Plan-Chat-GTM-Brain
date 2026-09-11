@@ -3,8 +3,11 @@
 Campaign A1. The highest-conversion motion in the library. Method:
 `reference/outbound-engine.md`.
 
-**Precondition, non-negotiable.** The Gap Report is run *before* the first touch. If it
-has not been run, this is not campaign A1 and this template does not apply.
+**Two forms of D3, and they run differently.** The main sequence below is the pre-run audit:
+twenty questions put to the agency's line before the first touch, and if it has not been run,
+this is not that sequence. The offered form, where the deliverable is a Plan Answer Sheet
+built from the plans they tell us they sell, is the variant further down and is what runs
+cold at scale. Both are defined in `reference/plan-answer-sheet.md`.
 
 **Qualify first.** 3–10 licensed agents, own inbound number, sells Medicare Advantage,
 and reachable — February to mid-September only.
@@ -39,8 +42,8 @@ Under 120 words. No attachment. No calendar link. No description of the product.
 
 ## Touch 2 — the rest of it, 4 days later
 
-Deliver the full Gap Report. No ask attached. One line: *"The whole thing, no strings.
-The section on after-hours is the one I'd read first."*
+Deliver the full audit. No ask attached. One line: *"The whole thing, no strings. The
+section on after-hours is the one I'd read first."*
 
 ## Touch 3 — the consequence, 5 days later
 
@@ -56,48 +59,28 @@ politely if no reply.
 
 ## Variant — offered rather than pre-run
 
-**When this applies.** Email-only motion, no enrichment on the row beyond the agency name,
-and the Gap Report offered cold and run on reply rather than before the first touch. This is
-the form `reference/marketing-campaigns.md` allows where pre-running is not economic. It is
-the weaker variant and the reason is worth holding: in the pre-run form the ask is permission
-to send something that already exists, and here it is permission to do work. Expect a lower
-reply rate than the 8% target, which assumes the asset arrives first.
+**When this applies.** Email or LinkedIn, no enrichment on the row beyond the agency name,
+and the Plan Answer Sheet offered cold and built on reply. This is what runs at scale, and it
+carries no phone call, so nothing is spent on a prospect who does not answer.
 
-**What carries the email instead of a finding.** The calendar, and only the calendar.
-15 October is a fixed CMS date, it is the one deadline this reader organises their year
-around, and it needs no enrichment to be true.
+**What carries the message.** The question list and the calendar. Twenty named questions let
+the owner diagnose their own front desk in seconds, and 15 October is the fixed CMS date they
+organise the year around. Neither needs enrichment to be true.
 
-### Touch 1 — the calendar
+### Touch 1 — the deliverable
 
-**Subject:** October 15
+**Subject:** the 20 questions, answered
 
 ```
-October 15 is [N] weeks out. From then until December 7, every one of your
-callers can change their plan.
+Between October 15 and December 7 your callers will ask the same twenty
+questions about their plans. The dental allowance, the OTC card, the
+specialist copay, what the out-of-pocket maximum actually covers.
 
-I'll put twenty real benefit questions to your line before that window opens,
-the kind callers actually ask, and send you a written note on which ones came
-back answered. No charge and nothing to install.
+Tell me which plans [Agency] sells and I'll send back a one-page answer
+sheet for each. Twenty questions, the answer to each, and the page of the
+carrier document it came from. Yours to print and keep by the phone.
 
-Want me to run it on [Agency]?
-
-[First name]
-```
-
-### Touch 1, alternate opening
-
-Where the calendar has already been used on that row, open on the distinction the whole
-positioning rests on. The first line is approved verbatim in `ops/copy-bank.md`.
-
-```
-Nobody calls a Medicare agency to ask what Medicare Advantage is. They call to
-ask what their own plan covers, and from October 15 to December 7 they can act
-on the answer.
-
-I'll put twenty of those questions to your line before the 15th and send you a
-written note on which ones came back answered.
-
-Want me to run it on [Agency]?
+No charge. Which plans should I run it on?
 
 [First name]
 ```
@@ -143,35 +126,36 @@ list with room to spare, and a message near 290 will truncate on the rows that m
 
 ### The request
 
-252 characters as written, 288 with the longest agency name merged.
+233 characters as written, 233 with or without a merge field. No agency name is needed,
+because the offer is specific without it.
 
 ```
-From October 15 every caller can switch plans, so your phone matters more
-than it does all year. Before then I'll put 20 real benefit questions to
-your line and send you a note on which ones came back answered. No charge.
-Want me to run it on [Agency]?
+Between October 15 and December 7 your callers will ask the same 20
+questions about their plans. Tell me which plans you sell and I'll send
+back a one-page answer sheet for each, taken from the carrier documents.
+No charge. Want one?
 ```
 
 ### Shorter alternate
 
-181 characters. Drops the reason and leads on the offer. Worth running against the first as a
-split, because on this channel brevity and a clear reason pull in opposite directions.
+216 characters. Leads on the deliverable rather than the calendar.
 
 ```
-Before October 15 I'll put 20 real benefit questions to your line and send
-you a note on which ones came back answered. No charge, nothing to install.
-Want me to run it on [Agency]?
+Tell me which Medicare plans you sell and I'll send back a one-page answer
+sheet for each: the 20 questions your callers ask most, answered from the
+carrier documents, with sources. Free, before October 15. Want one?
 ```
 
 ### Why it is built this way
 
-**The reason comes before the offer.** October 15 is the date the reader organises their year
-around, and one clause on what changes then does the persuading that a paragraph about missed
-calls would do worse.
+**The question list does the diagnosis.** An owner reads "the dental allowance, the OTC card,
+the specialist copay" and knows within seconds which of them their front desk cannot answer
+today. They diagnose themselves, privately, which lands harder than a stranger's verdict and
+costs them nothing in pride.
 
-**The ask is a yes or no.** Not a call, not a calendar link, not a reply with information.
-Acceptance and reply are two separate decisions on this channel, and a question answerable in
-one word is the only ask that survives both.
+**The ask is the conversion.** We need their plan list to build the sheet, so the reply the
+deliverable requires is the reply we want. There is no second conversion step and no meeting
+request anywhere in the first touch.
 
 **There is no company name and no capability.** Strip the sender and the note still makes
 sense, which is the test in `ops/QA-checklist.md`. A connection note that describes a product
