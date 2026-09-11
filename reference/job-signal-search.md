@@ -792,6 +792,52 @@ Gallagher, HUB, Alliant, USI, Aon, NFP, Alera and Holmes Murphy all match the po
 description, are genuinely insurance, and genuinely sell Medicare. Only headcount separates
 them.
 
+### Who to contact on a fit-first list
+
+The owner tier above is the target, unchanged. Two things about this mode change how you
+reach it.
+
+**Below roughly ten employees, rank by seniority rather than match on title.** At a
+four-agent agency the owner is often listed as "Licensed Insurance Agent", identical to the
+three people who work for them. A title filter either misses the owner or returns the whole
+company. Returning everyone, sorting by seniority, and keeping one row is more reliable than
+any list of strings, and at this size it is cheap.
+
+That resolves a contradiction in the exclusion list above: agent titles are Level 1 at a
+thirty-person agency and are the owner at a four-person one. **Make the exclusion conditional
+on headcount.**
+
+| Company headcount | How to pick the contact |
+|---|---|
+| Under 10 | Seniority rank, keep one. Do not exclude agent titles, the owner is probably wearing one |
+| 10 to 25 | Owner-tier titles first, agent titles excluded |
+| 25 to 50 | Owner tier, or the operations fallback where a real manager exists |
+
+Small agencies also register as limited liability companies more often than as corporations,
+so add the forms that produces to the owner tier.
+
+```
+Managing Member, Member, Owner Operator, Owner and Agent, Founder and Agent, President and
+CEO, Agency Owner and Producer
+```
+
+**Expect the people search to come back empty on a large share of the list.** A four-person
+agency in a small county may have no LinkedIn presence for its owner at all, and the job
+signal's best owner test, the contact attached to the post, does not exist in this mode. The
+website is the authority here rather than the fallback.
+
+Work it in this order, and stop at the first that resolves:
+
+| Source | What it gives |
+|---|---|
+| The agency's own about or team page | Name, title and often a direct email. The description already asks for this page |
+| Surname against the company name | Still the cheapest test, and this mode surfaces the domain first |
+| State insurance department licence lookup | The broker of record, which is the licensed and liable individual |
+| Domain registration and the Google business profile | Where the site names nobody |
+
+A published address of the form firstname@agencydomain is common at this size and is worth
+more than an inferred pattern, because the owner chose it.
+
 ### The one signal to rebuild afterwards
 
 A fit list arrives flat, and the scoring columns in this file mostly read job text that no
