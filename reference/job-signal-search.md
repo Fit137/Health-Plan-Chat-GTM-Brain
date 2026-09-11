@@ -411,6 +411,139 @@ If the company routing step sent the account to ICP-2, this entire section is vo
 target is the Director of Operations first and the principal second, and the two tracks
 never merge. An ICP-2 prospect reached with an ICP-1 approach is a prospect spent.
 
+## The agent-proximate manager, and the track it puts you on
+
+The owner tier above is the ICP-1 target. Aiming at the person who manages the agents
+instead changes the company filter before it changes the title filter, and it changes it a
+lot.
+
+**The role does not exist at ICP-1 scale.** An agency with 3 to 10 licensed agents and 1 to
+2 admin has no layer between the owner and the front line. The owner is that manager, and
+is usually also the top producer. Searching the role at that size returns nothing, or
+returns a producer with an inflated title.
+
+It becomes real at the top edge of ICP-1 and is fully staffed in ICP-2, where the brain
+already names the Director of Operations as frequently the true buyer. So this is a
+decision to run B1 rather than A1, and the two tracks never merge.
+
+| Company headcount | Who manages the agents | Track |
+|---|---|---|
+| 2 to 15 | The owner. No separate role exists | A1, the owner tier above |
+| 15 to 50 | An agency manager or operations manager, sometimes | Top edge of ICP-1 |
+| 50 to 500 | A staffed layer: sales, operations, agent development | ICP-2, B1 |
+
+The practical consequence is a second company table. The headcount ceiling of 50 that makes
+the owner search work will return almost none of these people. The productive band here is
+roughly 25 to 500, which is a different pool built from the same job signal.
+
+### Titles — direct agent supervision
+
+The truest match. These people own a team of licensed agents and their numbers.
+
+```
+Sales Manager, Medicare Sales Manager, Director of Sales, Sales Director, Director of
+Medicare Sales, Agency Manager, Regional Sales Manager, Territory Manager, District
+Manager, Field Sales Manager, Branch Manager, Sales Team Lead, Team Lead
+```
+
+### Titles — operations and workflow
+
+The buyer for the second half of the request. They own how the work is done rather than who
+does it, which makes them the shortest path to a workflow conversation.
+
+```
+Director of Operations, Operations Manager, VP of Operations, Vice President of Operations,
+Head of Operations, Chief Operating Officer, COO, Operations Lead, Director of Business
+Operations, General Manager
+```
+
+### Titles — agent development, enablement and distribution
+
+ICP-2 specific, and the highest proximity to the agent of any tier here. These roles exist
+because somebody has to make a downline consistent.
+
+```
+Director of Agent Development, Agency Development Manager, Director of Agent Services,
+Agent Services Manager, Director of Training, Training Manager, Sales Enablement Manager,
+Director of Sales Enablement, Director of Distribution, VP of Distribution, Director of
+Agent Experience
+```
+
+### Titles — contact centre
+
+Where a phone floor exists, this person owns the exact metric the product moves.
+
+```
+Call Center Manager, Contact Center Manager, Director of Call Center Operations, Director
+of Contact Center Operations, Telesales Manager, Inside Sales Manager, Director of Inside
+Sales, Customer Experience Manager, Director of Customer Experience
+```
+
+### Titles — compliance
+
+Named in B1 alongside operations, and they own answer consistency across a downline nobody
+can supervise call by call.
+
+```
+Chief Compliance Officer, Director of Compliance, Compliance Manager, Compliance Officer
+```
+
+### Titles to exclude
+
+Individual contributors, and the managers of everything that is not an agent.
+
+```
+Licensed Insurance Agent, Medicare Agent, Medicare Sales Agent, Sales Agent, Producer,
+Account Executive, Sales Representative, Customer Service Representative, Account Manager,
+Recruiting Manager, Recruiter, Talent Acquisition, Marketing Manager, Product Manager,
+Project Manager, IT Manager, Claims Manager, Case Manager, Care Manager, Nurse Manager,
+Practice Manager, Billing Manager, Revenue Cycle Manager, Provider Relations Manager,
+Underwriting Manager
+```
+
+"Account Manager" is the one that looks right and is not. They manage accounts, not agents.
+
+### Seniority
+
+Manager, Director, VP and Head, plus COO. Not founder, owner or the rest of the C-suite,
+which is the previous section's filter and returns a different person.
+
+### Why the replacement frame loses this buyer
+
+The second half of the request works. The first half does not, and it fails on mechanics
+before it fails on anything else.
+
+Our product hands the caller to a licensed agent. It cannot replace one, because only a
+licensed agent can take an enrollment. A pitch built on replacement describes a product we
+do not sell, to a buyer who will establish that in the first call.
+
+It also misreads the buyer. A manager of eight agents whose agents are replaced manages
+nobody. Headcount is the basis of the role, so replacement is a threat to this person
+rather than an offer, and they will hear it in the first sentence.
+
+And it walks into the documented failure mode. Level 1 holds no formal influence and a real
+veto, and in ICP-2 contractor adoption is the named failure mode, with agent comms
+answering "is this replacing me" a rollout deliverable rather than an afterthought. This
+manager already knows that. They are the person who has to hold the team together through a
+rollout, and they price that risk before they price the product.
+
+### What compels them instead
+
+Their own numbers. Same person, same proximity to the agent, an argument that survives the
+first call.
+
+| What they are measured on | What the product does to it |
+|---|---|
+| Calls answered against calls missed, and after-hours abandonment | Coverage at the hours no roster covers |
+| Ramp time for a new agent | The plan corpus answers what a new hire cannot yet |
+| Answer consistency across the team or the downline | One corpus, enforced uniformly, with disclaimer and recording |
+| AEP peak overflow | The capacity spike that cannot be hired for twice a year |
+| Escalations that reach the owner | Fewer, because the routine plan questions resolve below them |
+| Time agents spend on benefit questions rather than enrollments | The agents keep their jobs and spend the day on the part that pays |
+
+The last row is the pitch. It is the same capability the replacement frame was reaching
+for, argued in a way that makes the manager look good rather than redundant.
+
 ## Scoring columns, built from the job text
 
 These rank the pool. None of them belongs in the search filter, because each one used as a
