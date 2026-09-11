@@ -21,151 +21,135 @@ ICP-1 stage 1, "we're missing calls we can't afford to miss", with a date on it.
 They are hiring a human to answer the phone and field plan questions. That is the job our
 front line does, priced against a salary rather than against a competitor.
 
+It is also the one we can only partly reach. This signal is sourceable only where the
+title itself carries Medicare, because the bare versions of those titles return the whole
+labour market. Treat what the search returns as a floor on how often it occurs.
+
 A third signal sits on top of both and costs nothing to capture: a role reposted two or
 three times, or open more than 45 days. They tried to hire the human and could not. That
 is the agency to run the Gap Report on first.
 
-## Structure: two passes, one pool
+## Structure: one pass, and the title carries the whole filter
 
-Run the search twice and union the results. One pass cannot be both broad and clean.
+The two-pass design this file used to carry is withdrawn. Pass B paired generic titles
+with a Medicare description keyword, on the assumption that the keyword would gate the
+title. It does not. Generic titles return the entire labour market, and "Customer Service
+Representative" returns U-Haul and Stripe before it returns a single agency.
 
-**Pass A, titles carry Medicare.** No description keyword at all. Title precision does the
-qualifying, so nothing is filtered away.
+The correction is a rule, not a tuning:
 
-**Pass B, titles are generic, description carries Medicare.** This is where the pool
-actually grows. A four-agent agency in Ocala posts "Licensed Insurance Agent" and never
-puts Medicare in the title, but the description says "Medicare Advantage" in the second
-line. Pass A cannot see that agency. Pass B is most of the addressable pool.
+**Every title in the include list must be one that a non-insurance employer could not
+post.** If a logistics company or a payments company could plausibly use the title, it is
+out, whatever the description field says. There is no keyword that repairs a title with no
+ICP signal in it.
 
-Point the **Exclude jobs** table at the previous run so each pass only returns posts that
-are new. Run weekly during the posting season, because repost frequency is itself a
-scoring input and only a weekly cadence measures it.
+The description field is the second half of that failure. A large employer's posting
+mentions Medicare in benefits and eligibility boilerplate, so the keyword matches
+companies that have nothing to do with the market. Leave it empty.
 
-**Verify the boolean before trusting the counts.** Run Pass B with titles only and note
-the result count, then add one description keyword and note it again. If the count drops,
-the panel ANDs the keyword block against the title block, and Pass B must use a single
-keyword rather than the full set. Everything below assumes it does AND.
+The cost is real and it is the right trade. The answer-the-phone cluster, the front desk
+and client services roles that were the highest-intent signal in the previous version, do
+not survive at the title level. They come back only where the title also carries Medicare
+or insurance, and the bare versions are gone.
 
-## Pass A — job titles to include
+## Job titles to include — Medicare in the title
 
-Medicare in the title. Paste as-is.
+The core list. No non-insurance employer posts any of these.
 
 ```
 Medicare Agent, Medicare Sales Agent, Licensed Medicare Agent, Medicare Insurance Agent,
 Medicare Sales Representative, Medicare Advisor, Medicare Insurance Advisor, Medicare
-Broker, Medicare Specialist, Medicare Sales Specialist, Medicare Enrollment Specialist,
+Broker, Medicare Insurance Broker, Medicare Specialist, Medicare Sales Specialist,
 Medicare Benefits Advisor, Medicare Sales Consultant, Medicare Consultant, Medicare
-Account Executive, Medicare Producer, Medicare Customer Service Representative, Medicare
-Client Services Representative, Senior Benefits Advisor, Senior Market Agent, Senior
-Health Advisor, Senior Insurance Advisor
+Account Executive, Medicare Producer, Medicare Enrollment Specialist, Medicare Enrollment
+Advisor, Medicare Customer Service Representative, Medicare Client Services
+Representative, Medicare Account Manager, Medicare Sales Manager, Medicare Agency Manager,
+Medicare Advantage Agent, Medicare Advantage Sales Agent, Medicare Advantage Sales
+Representative, Medicare Supplement Agent, Medigap Agent, Medicare Part D Agent
 ```
 
-If the panel matches on substring rather than whole phrase, the single entry `Medicare`
-replaces the first eighteen of these and returns strictly more. Test it on one run before
-switching, because a substring match also pulls in every payer and provider title, and the
-exclusion list below then has to carry the whole load.
+Two of these carry provider-side drift rather than employer-side drift. Health systems and
+clinics use "Medicare Specialist" and "Medicare Enrollment Specialist" for patient
+eligibility work. The exclusion list below removes them by the second word in the title.
 
-The four senior-market entries are the one soft spot in Pass A. "Senior" reads as
-seniority as often as it reads as the over-65 market, so send those four straight to the
-scoring step rather than to outreach.
+## Job titles to include — senior market
 
-**Job description keywords: leave empty.** Any keyword here only subtracts.
-
-## Pass B — job titles to include
-
-Generic titles. The description keyword does the qualifying.
+The segment's own language for the same roles, for agencies that do not put Medicare in
+the title.
 
 ```
-Insurance Agent, Licensed Insurance Agent, Insurance Sales Agent, Licensed Sales Agent,
-Licensed Agent, Insurance Advisor, Insurance Broker, Insurance Producer, Sales Producer,
-Benefits Advisor, Benefits Consultant, Health Insurance Agent, Health Insurance Advisor,
-Life and Health Agent, Licensed Sales Representative, Insurance Sales Representative,
-Enrollment Specialist, Enrollment Advisor, Enrollment Counselor, Client Services
-Representative, Client Service Specialist, Customer Service Representative, Insurance
-Customer Service Representative, Account Manager, Service Agent, Receptionist, Front Desk
-Receptionist, Office Administrator, Office Manager, Administrative Assistant, Agency
-Assistant, Licensed Assistant, Inside Sales Representative, Appointment Setter, Call
-Center Representative, Sales Assistant, Agency Manager, Sales Manager, Director of Sales,
-Seasonal Licensed Agent, Seasonal Insurance Agent, AEP Agent, Open Enrollment Agent,
-Bilingual Insurance Agent, Bilingual Customer Service Representative
+Senior Market Agent, Senior Market Advisor, Senior Market Sales Agent, Senior Market
+Specialist, Senior Products Agent, Senior Benefits Agent
 ```
 
-The back half of that list, from `Client Services Representative` down, is the
-answer-the-phone cluster. It is the highest-intent half and the one a title-only search
-misses entirely.
+Only titles where "senior" cannot be read as seniority belong here. "Senior Benefits
+Advisor", "Senior Insurance Advisor" and "Senior Health Insurance Agent" are all common
+corporate titles about experience level, and each one reopens exactly the drift this
+version removes. They stay out.
 
-## Pass B — job description keywords
+## Job description keywords
 
-```
-Medicare, Medicare Advantage, Medicare Supplement, Medigap, Part D, AHIP, Annual
-Enrollment Period
-```
+**Leave empty.** On both lists above the title has already done the qualifying, and any
+keyword added here only subtracts from a pool that is already precise.
 
-If the panel ORs these, use all seven. If it ANDs them, use `Medicare` alone and nothing
-else. Every term after the first is a long-tail cut, and `Medicare` appears in the
-description of essentially every post the other six would have found.
+## Job titles to include — volume extension, off by default
 
-## Job titles to exclude — both passes
-
-Four families of drift. These do not cost pool size, because nothing they remove was ever
-inside the ICP.
-
-**Clinical and provider.** The word Medicare appears in thousands of care-delivery posts.
+Turn this on only if the core lists come back too thin to work, and understand what it
+gives up.
 
 ```
-Nurse, Registered Nurse, RN, LPN, LVN, Nurse Practitioner, Physician, Medical Assistant,
-Certified Nursing Assistant, CNA, Caregiver, Home Health Aide, Personal Care Aide,
-Therapist, Physical Therapist, Occupational Therapist, Social Worker, Case Manager, Care
-Manager, Care Coordinator, Care Navigator, Patient Advocate, Patient Access, Patient
-Services, Clinical, Pharmacist, Pharmacy Technician, Dental Assistant, Dental Hygienist
+Licensed Insurance Agent, Licensed Insurance Sales Agent, Insurance Sales Agent, Insurance
+Agent, Insurance Producer, Insurance Broker, Health Insurance Agent, Licensed Health
+Insurance Agent, Life and Health Insurance Agent, Health Insurance Advisor, Insurance
+Customer Service Representative, Insurance Account Manager
 ```
 
-**Payer and back office.** Carrier-side and revenue-cycle roles, none of which sit in an
-agency.
+These are insurance-exclusive, so they do not return the labour market at large. They also
+do not prove Medicare. The agency in the result may sell property and casualty, life, or
+group benefits, and the list reopens the 1099 recruiting volume that the final expense and
+mortgage protection operations generate.
+
+Run it as a separate search with its own table, never merged into the core pool, so the
+two can be measured against each other before anything is sent.
+
+## Job titles to exclude
+
+With Medicare-bounded titles the drift is no longer U-Haul. It is the wrong side of this
+same market: providers, payers and back office. That makes the list shorter and sharper
+than the previous version.
 
 ```
-Claims Adjuster, Claims Examiner, Claims Processor, Claims Specialist, Claims Analyst,
-Medical Biller, Billing Specialist, Medical Coder, Coding Specialist, Revenue Cycle,
-Utilization Review, Utilization Management, Prior Authorization, Credentialing, Provider
-Relations, Provider Network, Network Development, Underwriter, Underwriting, Actuary,
-Actuarial, Risk Adjustment, HEDIS, Stars, Quality Analyst, Data Analyst, Business Analyst,
-Project Manager, Software Engineer, Developer
+Patient, Clinical, Nurse, Registered Nurse, RN, LPN, LVN, Case Manager, Care Manager, Care
+Coordinator, Care Navigator, Social Worker, Home Health, Hospice, Pharmacy, Pharmacist,
+Billing, Biller, Coder, Coding, Revenue Cycle, Claims, Utilization Review, Utilization
+Management, Prior Authorization, Credentialing, Provider Relations, Provider Network,
+Network Development, Underwriter, Underwriting, Actuary, Actuarial, Risk Adjustment,
+HEDIS, Stars, Auditor, Data Analyst, Business Analyst, Software Engineer, Developer,
+Recruiter, Talent Acquisition, Trainer, Intern, Internship
 ```
 
-**Wrong line of business.** Property and casualty volume alone would swamp the pool.
+Add this second block only when the volume extension above is running. On the core lists
+it is inert, because nothing matching "Medicare Agent" also matches "Real Estate Agent".
 
 ```
-Auto, Home, Property, Casualty, Property and Casualty, Personal Lines, Commercial Lines,
-Commercial Insurance, Workers Compensation, Financial Advisor, Financial Planner, Wealth,
-Investment, Loan Officer, Mortgage
+Real Estate, Leasing, Travel Agent, Freight, Booking Agent, Reservation, Ramp Agent, Gate
+Agent, Dispatcher, Auto, Property, Casualty, Personal Lines, Commercial Lines, Workers
+Compensation, Mortgage, Loan Officer, Financial Advisor, Financial Planner, Wealth,
+Final Expense, Mortgage Protection, Annuity
 ```
 
-**The word "agent" everywhere else.** Pure noise from the generic titles in Pass B.
+## What no keyword can do
 
-```
-Real Estate Agent, Leasing Agent, Travel Agent, Freight Agent, Booking Agent, Talent
-Agent, Reservation Agent, Ramp Agent, Gate Agent, Customs Agent, Transfer Agent,
-Dispatcher, Recruiter, Recruiting, Talent Acquisition, Staffing, Intern, Internship
-```
+The title lists above return Medicare roles at Medicare organisations. They do not return
+only agencies, and no string in this panel can, because the organisations that are not
+agencies use the same titles.
 
-## Reversible exclusions — your call on the trade
+Carriers post "Medicare Sales Agent". So do national call centres, Field Marketing
+Organisations recruiting downline, and staffing firms. They are inside the vertical, they
+use the vertical's vocabulary, and they post at a volume that buries the real pool.
 
-Each of these removes real volume, and some of what it removes is inside the ICP. Start
-with them off, measure the noise, then turn on only the ones the data justifies.
-
-| Exclusion | What it removes | What it costs |
-|---|---|---|
-| `Final Expense` | Mostly 1099 recruiting posts, very high volume | Medicare agencies genuinely cross-sell final expense |
-| `Mortgage Protection` | Close to pure recruiting noise | Almost nothing. Turn this one on first |
-| `Annuity` | Financial-services drift | Some Medicare agencies sell annuities |
-| `Employee Benefits`, `Group Benefits`, `Group Health` | Group brokers | A group broker with a Medicare book is a real prospect |
-| `Trainee`, `Agent Trainee` | Captive career-agency programmes | An agency training a new hire has the same capacity pain |
-| `Remote` | National call centres and downline recruiting | Small agencies do hire remote licensed agents |
-
-`Remote` is the one worth understanding rather than just setting. A fully-remote licensed
-agent post is overwhelmingly a national call centre or a downline recruiting drive, and
-neither has its own local inbound number, which is the thing our product answers. Capture
-remote as a column and deprioritise it. Do not filter on it.
+That separation is a company-level filter, and it is unavoidable. What it does not have to
+be is a recurring cost. Set it once, as described below, and every later run inherits it.
 
 ## Location
 
@@ -243,20 +227,52 @@ imported table before a single Gap Report is spent.
 headcount to 2 to 50, and treat 3 to 25 as the core. Small agencies undercount themselves
 on every data source, so a hard ceiling at 10 throws away real prospects.
 
-**Company exclusions by name.** This is the filter that decides the quality of the pool, and
-none of it is doable in the title panel. Four groups:
+**Company exclusions by name.** Paid once, inherited by every run afterwards. This is the
+filter the title lists cannot be, and the four groups it removes are all inside the
+vertical.
 
-- Carriers and their captive sales arms. They are not agencies, and they post Medicare
-  sales roles in volume.
-- National direct-to-consumer call centres and lead aggregators. Hundreds of agents, their
-  own stack, and nothing resembling the ICP-1 buying process.
-- Captive property and casualty franchise networks, which post "insurance agent" at a rate
-  that dwarfs the real pool.
-- The 1099 recruiting operations that post continuously and hire nobody.
+Carriers and their captive sales arms:
 
-Build the list from the first run's top 50 companies by post count rather than from
-memory. In this market, post volume identifies the wrong companies almost perfectly: an
-agency with six agents posts one job, and everything posting forty is out of profile.
+```
+UnitedHealthcare, UnitedHealth Group, Optum, Humana, Aetna, CVS Health, Elevance Health,
+Anthem, Wellpoint, Centene, WellCare, Cigna, Kaiser Permanente, Molina Healthcare, Devoted
+Health, Clover Health, Alignment Healthcare, SCAN Health Plan, Highmark, Health Care
+Service Corporation, Blue Cross, Blue Shield, BCBS, CareSource, Priority Health,
+Healthfirst, EmblemHealth
+```
+
+National direct-to-consumer call centres and lead aggregators:
+
+```
+eHealth, GoHealth, SelectQuote, Assurance IQ, HealthMarkets, Spring Venture Group,
+TogetherHealth, TZ Insurance Solutions, HealthPlanOne, Connie Health, Chapter
+```
+
+Field Marketing Organisations and General Agencies. These are routed rather than binned,
+per the note below:
+
+```
+Integrity Marketing Group, AmeriLife, Senior Market Sales, Ritter Insurance Marketing,
+Agent Pipeline, Berwick Insurance, Pinnacle Financial Services, Precision Senior Marketing,
+The Brokerage Inc
+```
+
+Captive networks and the 1099 recruiting operations:
+
+```
+State Farm, Allstate, Farmers Insurance, Goosehead Insurance, Freeway Insurance, Family
+First Life, Symmetry Financial Group, Globe Life, American Income Life, Primerica, Bankers
+Life, New York Life, Combined Insurance, Aflac, Colonial Life, Robert Half, Aerotek,
+Randstad, Adecco, Kelly Services
+```
+
+Treat that as a starting list to verify rather than a finished one. Extend it after the
+first run from the top 50 companies by post count, because post volume identifies the
+wrong companies in this market almost perfectly: an agency with six agents posts one job,
+and everything posting forty is out of profile.
+
+The cheapest way to build the extension is the recruiter toggle above. Run one pass with
+it on, take the company names, add them here, turn it off.
 
 **Route rather than discard.** A Field Marketing Organisation or General Agency hit is not
 noise, it is ICP-2. Send it to the B1 LinkedIn track and title-verify it there. The two
