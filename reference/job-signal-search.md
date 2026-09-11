@@ -1025,23 +1025,21 @@ are agents rather than consumers, or a staffing firm.
 medicare - advantage if the site says it sells Medicare Advantage. supplement_only if it
 sells Medicare Supplement, Medigap or Part D but not Medicare Advantage. none if it does not
 sell Medicare to individuals.
-local - yes if it names the state, city or counties it serves. no if it sells nationwide.
 inbound_phone - yes if a phone number is published for people to call.
 
 Scoring:
 If is_agency is no, or medicare is none, or inbound_phone is no: score 0, verdict remove.
-Otherwise score = (advantage 6, supplement_only 2) + (local 4, not local 0).
-Verdict: 10 fit, 6 weak, below 6 remove.
+Otherwise advantage is score 10 verdict fit, supplement_only is score 5 verdict weak.
 
 Return this JSON only:
-{"is_agency":"","medicare":"","local":"","inbound_phone":"","score":0,"verdict":""}
+{"is_agency":"","medicare":"","inbound_phone":"","score":0,"verdict":""}
 ```
 
-### Why the score is in the prompt this time
+### Why the score is in the prompt
 
 Asking a model to judge a company out of a hundred is unstable, because nothing constrains
-what the number means. Giving it four of its own answers and the arithmetic to apply to them
-is a different task, and it returns the four answers alongside the score, so any verdict can
+what the number means. Giving it three of its own answers and the arithmetic to apply to them
+is a different task, and it returns the three answers alongside the score, so any verdict can
 be checked against the evidence that produced it. If the fields and the score disagree, the
 fields win and the row gets re-run.
 
@@ -1056,22 +1054,42 @@ fields win and the row gets re-run.
 The phone gate is the one people skip. No published number is not a weak prospect, it is a
 prospect with nothing to deploy into.
 
-### The four possible scores
+### Why geography is not judged here
+
+An earlier version of this gate scored whether the site named a local service area, worth 4
+of 10 points, on the reasoning that it caught national direct-to-consumer brokerages. It is
+withdrawn. The criterion was sound and the instrument was wrong.
+
+Small agencies overclaim reach as a matter of routine. A five-person agency in Tampa writes
+"serving clients nationwide" or lists eight states of licensure, and a website reading would
+demote exactly the agencies worth contacting, on the strength of marketing copy, for 40 per
+cent of the score.
+
+It was also redundant three times over. The named blocklist already removes the national
+brokerages, the headcount ceiling removes the rest, and the state sits on the contact record
+where it is used for the dense-eight ordering. Geography is still an ICP-1 criterion; it is
+measured where the data is good.
+
+There is a further reason to leave it alone. An agency licensed across several states carries
+more plan complexity rather than less, so multi-state is closer to a reason to contact them
+than a reason not to.
+
+### What survives, and what orders the survivors
 
 | Score | Meaning | Verdict |
 |---|---|---|
-| 10 | Sells Medicare Advantage, serves a named area | fit |
-| 6 | Medicare Advantage but sells nationwide, or Supplement only in a named area | weak |
-| 2 | Supplement only, nationwide | remove |
+| 10 | Sells Medicare Advantage | fit |
+| 5 | Medicare Supplement or Part D only | weak |
 | 0 | Failed a gate | remove |
 
-Coarse on purpose. This column answers what kind of company it is and nothing else.
-Ordering the survivors happens in the table, against the headcount and state already on the
-contact record: 3 to 10 people in FL, TX, AZ, CA, PA, OH, NC or MI goes first.
+Two gradations is the honest ceiling for what a website can tell us about fit. The gates do
+the exclusion, which is the job asked of this column, and **Medicare Advantage is the only
+quality distinction a home page reliably supports.** Supplement and Part D questions have
+short answers a front desk can learn. The questions that go unanswered, and the plan corpus
+with depth worth building, are both Medicare Advantage.
 
-**Medicare Advantage is what separates a 10 from a 6.** Supplement and Part D questions have
-short answers a front desk can learn. The benefit questions that go unanswered, and the plan
-corpus that has depth worth building, are both Medicare Advantage.
+Ordering happens in the table against data that is already better than the website: 3 to 10
+people, and a state in FL, TX, AZ, CA, PA, OH, NC or MI.
 
 ### What it cannot tell you
 
