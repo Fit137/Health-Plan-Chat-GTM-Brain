@@ -5,9 +5,9 @@ Campaign A1. The highest-conversion motion in the library. Method:
 
 **Two forms of D3, and they run differently.** The main sequence below is the pre-run audit:
 twenty questions put to the agency's line before the first touch, and if it has not been run,
-this is not that sequence. The offered form, where the deliverable is a Plan Answer Sheet
-built from the plans they tell us they sell, is the variant further down and is what runs
-cold at scale. Both are defined in `reference/plan-answer-sheet.md`.
+this is not that sequence. The offered form, where the deliverable is a 2027 Plan Change
+Report built from the plans they tell us they sell, is the variant further down and is what runs
+cold at scale. Both are defined in `reference/plan-change-report.md`.
 
 **Qualify first.** 3–10 licensed agents, own inbound number, sells Medicare Advantage,
 and reachable — February to mid-September only.
@@ -60,27 +60,29 @@ politely if no reply.
 ## Variant — offered rather than pre-run
 
 **When this applies.** Email or LinkedIn, no enrichment on the row beyond the agency name,
-and the Plan Answer Sheet offered cold and built on reply. This is what runs at scale, and it
+and the change report offered cold and built on reply. This is what runs at scale, and it
 carries no phone call, so nothing is spent on a prospect who does not answer.
 
-**What carries the message.** The question list and the calendar. Twenty named questions let
-the owner diagnose their own front desk in seconds, and 15 October is the fixed CMS date they
-organise the year around. Neither needs enrichment to be true.
+**What carries the message.** The September 30 letter deadline and the wave of calls behind
+it. Both are fixed CMS facts about the reader's own October, and neither needs a single field
+of enrichment to be true.
 
 ### Touch 1 — the deliverable
 
-**Subject:** the 20 questions, answered
+**Subject:** what changed on your plans for 2027
 
 ```
-Between October 15 and December 7 your callers will ask the same twenty
-questions about their plans. The dental allowance, the OTC card, the
-specialist copay, what the out-of-pocket maximum actually covers.
+Your members get their Annual Notice of Change letters by September 30.
+The calls start the week after, and they are all the same call: what does
+this mean for me.
 
-Tell me which plans [Agency] sells and I'll send back a one-page answer
-sheet for each. Twenty questions, the answer to each, and the page of the
-carrier document it came from. Yours to print and keep by the phone.
+Tell me which plans [Agency] sells and I'll read the 2027 Summary of
+Benefits against the 2026 version for each one. Every change, premium,
+copays, dental, the OTC card, network, with the page it came from. AI does
+the reading and I check it against the source.
 
-No charge. Which plans should I run it on?
+No charge, and you'll have it the week the documents land. Which plans
+should I run?
 
 [First name]
 ```
@@ -126,32 +128,30 @@ list with room to spare, and a message near 290 will truncate on the rows that m
 
 ### The request
 
-233 characters as written, 233 with or without a merge field. No agency name is needed,
-because the offer is specific without it.
+211 characters. No merge field, because the offer is specific without one.
 
 ```
-Between October 15 and December 7 your callers will ask the same 20
-questions about their plans. Tell me which plans you sell and I'll send
-back a one-page answer sheet for each, taken from the carrier documents.
-No charge. Want one?
+Your members get their Annual Notice of Change letters by September 30 and
+the calls start the week after. Tell me which plans you sell and I'll send
+you every 2027 change, cited to the page. No charge. Want it?
 ```
 
-### Shorter alternate
+### Alternate, naming the method
 
-216 characters. Leads on the deliverable rather than the calendar.
+210 characters. Leads on the documents and says where AI sits.
 
 ```
-Tell me which Medicare plans you sell and I'll send back a one-page answer
-sheet for each: the 20 questions your callers ask most, answered from the
-carrier documents, with sources. Free, before October 15. Want one?
+The 2027 Summary of Benefits documents land this month. Tell me which plans
+you sell and I'll run them against the 2026 versions and send you every
+change, cited to the page. AI does the reading. Free. Want it?
 ```
 
 ### Why it is built this way
 
-**The question list does the diagnosis.** An owner reads "the dental allowance, the OTC card,
-the specialist copay" and knows within seconds which of them their front desk cannot answer
-today. They diagnose themselves, privately, which lands harder than a stranger's verdict and
-costs them nothing in pride.
+**It tells them something they do not know.** No owner knows in September exactly what moved
+on every plan in their book for next year, because the documents are only now publishing.
+That is what separates this from an audit score or a cheat sheet, both of which told the
+owner something they already believed.
 
 **The ask is the conversion.** We need their plan list to build the sheet, so the reply the
 deliverable requires is the reply we want. There is no second conversion step and no meeting

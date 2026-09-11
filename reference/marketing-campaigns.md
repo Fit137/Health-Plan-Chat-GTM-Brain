@@ -11,9 +11,9 @@ Six, on a sliding scale of perceived value against ease of delivery. D3 is the s
 |---|---|---|---|---|
 | D1 | Medicare AI Readiness Scorecard | Medium | Very low | Communities, forums |
 | D2 | Missed-Call Revenue Calculator | Medium-high | Low | Paid traffic — the instant-payoff driver |
-| **D3** | **Plan Answer Sheet** | **8.6** | **6.7** | **Everywhere. The TOFU spine of both funnels** |
+| **D3** | **2027 Plan Change Report** | **8.6** | **6.7** | **Everywhere. The TOFU spine of both funnels** |
 
-What D3 is and how it is built: `reference/plan-answer-sheet.md`. It replaced the Benefit
+What D3 is and how it is built: `reference/plan-change-report.md`. It replaced the Benefit
 Answer Gap Report as the primary form; the audit is retained there as a pre-run variant.
 | D4 | 72-Hour Plan Brain Sandbox | Very high | High | Stage 3, after qualification |
 | D5 | CMS AI Exposure Review | High | Medium | ICP-2 entry, and ICP-1 stage 4 |
