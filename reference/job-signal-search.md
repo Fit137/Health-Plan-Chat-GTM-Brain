@@ -847,6 +847,71 @@ hard ICP-1 qualifier and the thing the Gap Report runs against, and how many nam
 agents the team page shows, which is the headcount number worth trusting over any data
 provider's.
 
+## Enrichments that earn the email
+
+What follows is ranked by how hard it is to fake. The test for every column: could a
+competitor send the same sentence to a different agency by changing one word? If yes, it is
+decoration.
+
+### The one that is not an enrichment and beats all of them
+
+Call their line on a Sunday and ask a benefit question. That is D3, it is already the
+strategy, and `outbound-engine.md` says why: a cold email carrying a recording of the
+prospect's own line failing competes with nothing, because nobody else has done the work.
+Everything below either ranks the queue for that call or substitutes where it cannot be run.
+
+### Tier one, from the company domain
+
+| Column | What it is | The sentence it buys |
+|---|---|---|
+| Medicare Advantage plans available in their county, current plan year | CMS publishes the plan landscape by county every year. Join on the county named on their site | A count they feel and have never seen written down, about their own market |
+| Review text mentioning calls | Google Business Profile reviews, filtered for callback, voicemail, hold, never answered, left a message | Their own callers, in public, describing the problem we fix |
+| Published office hours | Scraped from the site or the business profile | Named hours against an enrollment period that runs seven days a week |
+| Carriers and plans named on the site | The logo wall and plan pages | Proof we read their book rather than their industry |
+
+The county plan count is the strongest of the four. It is public, it is specific to them, it
+is impossible to write without having looked, and it states our problem as arithmetic rather
+than as a claim. The current plan year's file is available now; the next year's lands in the
+weeks before enrollment opens, so use what is published and date it.
+
+The review column is the sharpest when it hits and it will not hit on most rows. Treat it as
+a ranking signal for which agencies get a call first.
+
+### Tier two, more work and more weight
+
+**State insurance department licence lookup.** Producer licences are public in every state.
+The lookup returns the National Producer Number, the lines of authority, the date first
+licensed, and in some states the carrier appointments. Two things come out of it: the number
+of years they have been licensed, which is the most personal non-creepy fact available about
+this buyer, and a verified list of who they are appointed with, which beats a scraped logo
+wall.
+
+It is also the right register. This is the licensed, personally liable individual, and a
+message that shows we know that is a message from someone who understands the business.
+
+**Language against the market.** Census county data on the over-65 population by language
+spoken at home, against whether their site has a Spanish version. Where the gap is wide it
+names a market they are not serving, and Spanish is shipped.
+
+### What not to enrich
+
+Job changes, tenure, post activity, shared connections, funding, technology stack, headcount
+growth, company anniversaries. None of it touches what the product does, and this audience
+has been sold to badly for a decade. A found fact that is not about their problem reads as
+surveillance rather than as work.
+
+### On the enrollment period as the frame
+
+It is the frame rather than the fallback, and one detail has to be right. The Annual
+Enrollment Period runs 15 October to 7 December by CMS rule, the same dates every year.
+There is no variance, so a message asking how long it ran last year, or whether it ran long,
+marks the sender as an outsider in the first line. What varies is their own volume inside a
+fixed window, and that is the thing to ask about.
+
+Naming their plans is allowed and lands well. The constraint from
+`reference/marketing-campaigns.md` holds: no carrier or plan named in a way that implies
+endorsement. Say which plans their callers ask about, never that a carrier stands behind us.
+
 ## The calendar, which decides when this runs rather than whether
 
 Sourcing and outreach come apart here, and the seasonal rule in `outbound-engine.md` binds
