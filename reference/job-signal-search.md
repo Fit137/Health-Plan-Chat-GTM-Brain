@@ -373,6 +373,38 @@ named directly on the job post has already put their name to the capacity proble
 whose own line failed the Gap test on a plan they actively sell is the one who cannot put
 the finding down.
 
+### The sanity gate: people found should approximate companies in
+
+A people search is scoped by company, not by job. It returns every person at each company
+who matches the filters, so one large employer in the input contributes thousands of rows
+on its own and the count stops being a count of prospects.
+
+**The target is one person per company.** Eighty-one companies should return something near
+eighty-one people, and realistically fewer once coverage gaps are allowed for. A result
+that is a multiple of the company count is not a large pool, it is a broken input, and the
+multiple names the problem.
+
+| People returned against companies in | What it means |
+|---|---|
+| Roughly one to one | Working as intended |
+| Two or three times | Several owners per agency, or the per-company cap is unset |
+| Hundreds of times | Enterprises in the company table. Stop and fix the table |
+
+Cap results per company at one where the panel offers it. Where it does not, deduplicate on
+company in the table and keep the highest-ranking owner-tier title.
+
+The failure is always upstream. The people search inherits whatever the company table holds
+and multiplies it, so an enterprise that survived the job-layer filters does not add one bad
+row here, it adds several thousand. Apply the company exclusion list and the headcount
+ceiling to the jobs table before it feeds a people search, never after.
+
+A headcount ceiling of 50 is the single filter that enforces this structurally. No carrier,
+health system or platform company survives it, and no ICP-1 agency is excluded by it.
+
+One cost that is not measured in rows: an outreach asset built for a 5-agent agency,
+arriving at a health plan chief executive or a former regulator, is read by exactly the
+people whose opinion this market takes seriously.
+
 ### The ICP-2 branch
 
 If the company routing step sent the account to ICP-2, this entire section is void. The B1
