@@ -128,31 +128,45 @@ list with room to spare, and a message near 290 will truncate on the rows that m
 
 ### The request
 
-165 characters. A question, not an offer.
+186 characters at the longest merge.
 
 ```
-Hi [First name], most of the calls between October 15 and December 7 are
-one question: what does my plan cover. Are you staffing for that this year,
-or looking at AI?
+Hi [First name], I think October 15 could be an outlier year for [Agency],
+if the inbound is handled differently. It's an AI setup. Can I send you how?
 ```
 
 ### Alternates
 
-154 characters, sharper on the after-hours gap.
+175 characters, no agency merge, framed on what separates this year.
 
 ```
-Hi [First name], between October 15 and December 7, what picks up the plan
-questions that come in after hours? More hands this year, or is AI on the
-table?
+Hi [First name], the difference this October 15 is going to be which
+agencies fixed their inbound before it started, not during. I can send you
+how to do that with AI. Want it?
 ```
 
-162 characters, framed on the season rather than the question type.
+201 characters, states the upside more directly.
 
 ```
-Hi [First name], the eight weeks from October 15 are the ones that decide
-your year. Are you adding people to cover the inbound this time, or looking
-at AI for it?
+Hi [First name], there's a way to use AI on your inbound before October 15
+that I think puts [Agency] well ahead of where it would otherwise land.
+Can I send you how?
 ```
+
+### The claim line this variant walks
+
+"Outlier results" as a promise is an outcome claim, and `ops/QA-checklist.md` requires every
+outcome number to be labelled as modelled and bars anything implying customers. There are
+none, so no version of this may say we have produced that result for anyone.
+
+What survives is the possibility and the method. **"I think it could be" is an opinion offered
+and "here is how" is a method sent**, and neither asserts a result we have delivered. Watch
+three drifts in any rewrite: "we help agencies" implies a book of them, "our clients see"
+invents one, and a number attached to the upside needs a unit, a date and the word modelled.
+
+The offer is also what to send. "How" is a written method for handling the inbound surge, not
+a call and not a demo. If it does not exist yet, it has to before this goes out, because the
+reply to this message asks for it immediately.
 
 ### Where the deliverable goes
 
