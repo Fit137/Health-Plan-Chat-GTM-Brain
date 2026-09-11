@@ -129,6 +129,66 @@ That is accurate and it must stay that way. Any drift into "I run these for agen
 
 ---
 
+## Variant — LinkedIn connection request, ICP-1 owner
+
+**Track note.** `reference/marketing-campaigns.md` routes ICP-1 owners found on LinkedIn into
+A1 rather than into B1, because B1 carries ICP-2 content. This is A1 content on the LinkedIn
+channel, which is allowed, and the rule that has to hold is the content one: no procurement,
+no security review, no downline language, ever, in this variant.
+
+**The hard limit is 300 characters, not words.** That is the LinkedIn connection note cap and
+it counts the merged agency name. Check the longest name in the table against it, not the
+average one: at 252 characters the message below still fits the longest name in a 997-row
+list with room to spare, and a message near 290 will truncate on the rows that matter.
+
+### The request
+
+252 characters as written, 288 with the longest agency name merged.
+
+```
+From October 15 every caller can switch plans, so your phone matters more
+than it does all year. Before then I'll put 20 real benefit questions to
+your line and send you a note on which ones came back answered. No charge.
+Want me to run it on [Agency]?
+```
+
+### Shorter alternate
+
+181 characters. Drops the reason and leads on the offer. Worth running against the first as a
+split, because on this channel brevity and a clear reason pull in opposite directions.
+
+```
+Before October 15 I'll put 20 real benefit questions to your line and send
+you a note on which ones came back answered. No charge, nothing to install.
+Want me to run it on [Agency]?
+```
+
+### Why it is built this way
+
+**The reason comes before the offer.** October 15 is the date the reader organises their year
+around, and one clause on what changes then does the persuading that a paragraph about missed
+calls would do worse.
+
+**The ask is a yes or no.** Not a call, not a calendar link, not a reply with information.
+Acceptance and reply are two separate decisions on this channel, and a question answerable in
+one word is the only ask that survives both.
+
+**There is no company name and no capability.** Strip the sender and the note still makes
+sense, which is the test in `ops/QA-checklist.md`. A connection note that describes a product
+reads as a vendor and is declined before it is read.
+
+**"No pitch" does not appear.** Saying it is what pitching sounds like to this reader. Not
+pitching is the version that works.
+
+### On acceptance
+
+A connection note carrying the whole offer means the reply can come before the connection is
+accepted, and nothing is lost when it does not. Where the request is accepted with no reply,
+the first message after acceptance is touch 1 of the email sequence, unchanged. Do not open
+that message by thanking them for connecting.
+
+---
+
 ## Guardrails
 
 - **Every capability mention** is checked against `rules/feature-status.md` before send.
