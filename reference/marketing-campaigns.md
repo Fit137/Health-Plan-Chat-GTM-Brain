@@ -12,6 +12,8 @@ Six, on a sliding scale of perceived value against ease of delivery. D3 is the s
 | D1 | Medicare AI Readiness Scorecard | Medium | Very low | Communities, forums |
 | D2 | Missed-Call Revenue Calculator | Medium-high | Low | Paid traffic — the instant-payoff driver |
 | **D3** | **Benefit Answer Gap Report** | **8.6** | **6.7** | **Everywhere. The TOFU spine of both funnels** |
+
+What D3 actually is, and how it is run: `reference/gap-report-method.md`.
 | D4 | 72-Hour Plan Brain Sandbox | Very high | High | Stage 3, after qualification |
 | D5 | CMS AI Exposure Review | High | Medium | ICP-2 entry, and ICP-1 stage 4 |
 | D6 | AEP Peak-Load Stress Test | High | Very high | Industry events only |
