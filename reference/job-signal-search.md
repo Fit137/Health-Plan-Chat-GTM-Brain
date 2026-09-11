@@ -60,7 +60,7 @@ The core list. No non-insurance employer posts any of these.
 Medicare Agent, Medicare Sales Agent, Licensed Medicare Agent, Medicare Insurance Agent,
 Medicare Sales Representative, Medicare Advisor, Medicare Insurance Advisor, Medicare
 Broker, Medicare Insurance Broker, Medicare Specialist, Medicare Sales Specialist,
-Medicare Benefits Advisor, Medicare Sales Consultant, Medicare Consultant, Medicare
+Medicare Benefits Advisor, Medicare Sales Consultant, Medicare
 Account Executive, Medicare Producer, Medicare Enrollment Specialist, Medicare Enrollment
 Advisor, Medicare Customer Service Representative, Medicare Client Services
 Representative, Medicare Account Manager, Medicare Sales Manager, Medicare Agency Manager,
@@ -137,6 +137,107 @@ Agent, Dispatcher, Auto, Property, Casualty, Personal Lines, Commercial Lines, W
 Compensation, Mortgage, Loan Officer, Financial Advisor, Financial Planner, Wealth,
 Final Expense, Mortgage Protection, Annuity
 ```
+
+## The fifth drift class: the Medicare vendor economy
+
+The four exclusion families above cover providers, payers, wrong lines of business and the
+word "agent". They miss the largest remaining source of contamination, which is every
+company that sells **to** Medicare organisations rather than selling Medicare.
+
+"Principal Consultant, Medicare" at Oracle is the type specimen. Oracle Health sells
+software to Medicare Advantage payers, so Medicare is the subject matter of the role rather
+than the product of the company. Health IT vendors, systems integrators, business process
+outsourcers, analytics firms, actuarial consultancies and expert networks all post this
+shape of role, all year, at volume.
+
+**A name list is the wrong instrument here and it is worth saying why.** Carriers are a
+closed set of maybe thirty companies and naming them works. The vendor economy is thousands
+of companies with a long tail that regenerates every year. Name the ones you have seen, and
+fix the class with the title rule.
+
+### The title rule that generalises
+
+A vendor role describes a function performed on Medicare. An agency role describes selling
+Medicare. The vocabularies barely overlap.
+
+```
+Principal Consultant, Senior Consultant, Managing Consultant, Consulting, Solutions
+Consultant, Solution Architect, Solutions Architect, Architect, Engineer, Engineering,
+Developer, Implementation, Delivery Manager, Engagement Manager, Practice Lead, Practice
+Director, Product Manager, Product Owner, Product Director, Platform, Strategy, Strategic
+Advisor, Advisory, Analytics, Data Scientist, Client Partner, Customer Success, Partner
+Manager, Business Development, Program Manager, Technical, Subject Matter Expert, Research,
+Policy Analyst, Informatics, Interoperability
+```
+
+This forces one correction to the core include list. **"Medicare Consultant" is withdrawn**,
+because it is the exact string the Oracle role matches. "Medicare Sales Consultant" stays,
+because "Sales" disambiguates it. Where a title needs a qualifier to be safe, keep the
+qualifier.
+
+### The names worth listing anyway
+
+The repeat offenders, which are worth blocking by name because they post continuously.
+
+Health IT, payer platforms and data:
+
+```
+Oracle, Oracle Health, Cerner, Epic Systems, Veradigm, Allscripts, athenahealth, NextGen
+Healthcare, eClinicalWorks, HealthEdge, Inovalon, Cotiviti, Zelis, Availity, Edifecs,
+Change Healthcare, Waystar, Innovaccer, Arcadia, Datavant, Health Catalyst, Definitive
+Healthcare, Komodo Health, Clarify Health
+```
+
+Medicare-specific vendors, risk adjustment and supplemental benefit administrators:
+
+```
+Convey Health Solutions, Gorman Health Group, Wakely Consulting, Milliman, ATTAC Consulting
+Group, Rebellis Group, NationsBenefits, Signify Health, Matrix Medical Network, Episource,
+Vatica Health, Reveleer, Advantmed, Pareto Intelligence
+```
+
+Consultancies, systems integrators and business process outsourcers:
+
+```
+Deloitte, Accenture, PwC, EY, KPMG, McKinsey, Bain, Boston Consulting Group, Cognizant,
+Infosys, Wipro, Tata Consultancy Services, NTT DATA, Capgemini, Genpact, Guidehouse, Huron
+Consulting, Alvarez and Marsal, Maximus, Sagility, Conduent, Exela, Concentrix, TTEC,
+Teleperformance, Alorica, Firstsource, WNS
+```
+
+Expert networks and talent marketplaces, which hire Medicare subject matter experts as
+contractors and are the reason unfamiliar technology names appear in a Medicare search:
+
+```
+Mercor, GLG, AlphaSights, Guidepoint, Third Bridge, Catalant, Business Talent Group,
+Upwork, Toptal
+```
+
+Agency-facing software, which is adjacent rather than competing and still not the ICP:
+
+```
+SunFire, Sunfire Matrix, Connecture, Destination Rx, AgentSync, MedicareCENTER
+```
+
+### How to surface the class rather than chase it
+
+Four columns on the jobs table find these without reading a single posting. Run them in this
+order, cheapest first.
+
+| Column | What separates an agency | What it catches |
+|---|---|---|
+| Company industry | Agencies are Insurance. Oracle is Software Development, Deloitte is Business Consulting, Mercor is Staffing | Nearly the whole vendor class in one filter |
+| Employee count | No independent agency runs past 500 people | Every enterprise, whatever it sells |
+| The apply link's hosting | Workday, Greenhouse, Lever, iCIMS, SmartRecruiters, SuccessFactors, Taleo, Ashby. A five-agent agency does not run Workday | Enterprise employers regardless of industry label |
+| Rows per company, sorted high to low | An agency with six agents posts one job | The repeat posters, which is the name list writing itself |
+
+The third one is the sleeper. The applicant tracking system a company uses is a near-perfect
+proxy for its size, it is visible without enrichment, and it does not care whether the
+company calls itself insurance.
+
+Industry set to Insurance plus employee count under 500 removes Oracle, Deloitte, Accenture,
+Mercor and Epic in one pass, without any of them being named. Use the names for what
+survives.
 
 ## What no keyword can do
 
