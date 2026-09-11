@@ -32,7 +32,8 @@ Six, on a sliding scale of perceived value against ease of delivery. D3 is the s
 **ICP-1**
 
 - **A1 ★ Personalised cold outreach.** The highest-conversion motion. One Gap finding plus
-  a recording of their own line, sent before any ask. Founder-led.
+  a recording of their own line, sent before any ask. Founder-led. Sourcing spec:
+  `reference/job-signal-search.md`.
 - **A2 Agent communities and forums.** Facebook agent groups, Insurance Forums,
   agent-only Slack and Discord. D1 scorecard, ungated, vendor affiliation disclosed.
 - **A3 AEP prep webinar.** Aggregate audit findings as the substance.

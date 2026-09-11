@@ -59,6 +59,8 @@ Archetype 5 is unusable until there is a design partner. Do not fabricate it.
 them — 3–10 agents, own inbound number, sells MA. Title-verify for ICP-2. Running the
 report on an out-of-profile agency wastes the one thing that makes this work.
 
+Where the pool comes from, and the search metadata that builds it: `job-signal-search.md`.
+
 **Write.** One finding, one sentence of consequence, one question. Under 120 words. The
 finding does the persuading; the copy just has to stay out of its way.
 
