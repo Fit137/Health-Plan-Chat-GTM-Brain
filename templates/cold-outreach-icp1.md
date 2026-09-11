@@ -167,6 +167,83 @@ replying, and the clause is what prevents that.
 What it does not do is name a product, claim a customer, or promise a number, which is what
 keeps it sendable.
 
+### The A/B: two arms, one variable
+
+**Arm A.** Connection request carrying the note above.
+**Arm B.** Plain connection request, no note, message after acceptance.
+
+**Both arms then run the identical two-step sequence below.** That is the discipline the test
+depends on: change the request or change the sequence, never both, or the result cannot be
+attributed to either. Arm A recipients will read step one as a continuation of the note, which
+is fine and is part of what the arm is testing.
+
+**Measure replies per 100 requests sent, not reply rate among accepted.** A note lowers
+acceptance and can raise reply quality, so reply rate among those who accepted flatters Arm A
+by hiding everyone the note turned away. Record acceptance rate, reply rate and the compound
+number, and settle the test on the third.
+
+### Step 1, on acceptance. The intrigue
+
+No AI, no product, no offer. A real question about their own October, which is the fastest
+thing to reply to and the only one that does not read as a sequence.
+
+```
+Hi [First name], a question about the next eight weeks.
+
+From October 15 most of your inbound is one question asked in different
+words. What does my plan cover. The dental allowance, the OTC card, a
+specialist copay.
+
+The part I'd want to know if I ran [Agency]: how many of those get answered
+on the first call, and how many turn into a callback.
+
+Do you track that?
+```
+
+Sixty-one words. The question is the point, not a device. Most owners cannot answer it, and
+noticing that they cannot is the whole reveal, arrived at privately.
+
+### Step 2, four days later if no reply. The value proposition
+
+```
+Hi [First name], following on from that.
+
+The reason I asked is that most AI put in front of you answers the phone.
+It picks up, it takes a message, it gets the caller to a human eventually.
+What it cannot do is tell someone what the dental allowance is on their
+plan, because it has never read their plan.
+
+There is a version now that has. It reads the Summary of Benefits for the
+plans you actually sell, so when a caller asks about the OTC card on a
+specific plan, the answer comes from the carrier's own document, in your
+agency's name, at nine on a Sunday. Anything it cannot resolve goes to one
+of your licensed agents with the whole conversation attached.
+
+Between October 15 and December 7 that is the difference between covering
+the surge and losing calls to it.
+
+I can send you how it is set up. One page, no call. Want it?
+```
+
+One hundred and fifty-four words. Every capability named is SHIPPED in
+`rules/feature-status.md`: plan-grounded answers from ingested Summary of Benefits and
+Evidence of Coverage, 24/7 answering, agency-branded greeting, escalation with the
+conversation carried across.
+
+**What is deliberately absent.** Appointment booking and Scope of Appointment capture, which
+are the two the reader asks about next and neither ships. The first draft of this message said
+competing AI "maybe books something", which is true and invites exactly that question, so it
+came out. No price, no company in the body, no customer of any kind.
+
+**Why the contrast leads.** "Most AI answers the phone, this one has read the plan" is the
+positioning compressed, and without it the reader files this with every receptionist product
+they have been pitched since 2023.
+
+### If there is still no reply
+
+Stop at two. A third message on this channel converts almost nothing and costs the profile.
+Leave the row for the email sequence or for January.
+
 ### The claim line this variant walks
 
 "Outlier results" as a promise is an outcome claim, and `ops/QA-checklist.md` requires every
