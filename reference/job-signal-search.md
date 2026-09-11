@@ -1,8 +1,10 @@
-# Job-post signal search — the A1 sourcing spec
+# Sourcing spec — how the A1 prospect pool gets built
 
-*The metadata that builds the prospect pool for A1 personalised cold outreach. Load this
-before running a jobs search. Channel method stays in `outbound-engine.md`; this file only
-decides who enters the pool.*
+*The metadata that builds the prospect pool for A1 personalised cold outreach. Two entry
+modes reach the same pipeline: the job-post signal, which is most of this file, and the
+fit-first company search at the end. Both hand off to the same company filters, contact
+layer and scoring. Channel method stays in `outbound-engine.md`; this file only decides who
+enters the pool.*
 
 `last_reviewed: 2026-09-11`
 
@@ -710,6 +712,94 @@ filter would cut the pool for a fraction of the gain it gives as a sort.
 The first row is the one to sort on. An agency on its third repost of a client services
 role in August has already priced the problem, failed to solve it with headcount, and is
 eight weeks from AEP.
+
+## Entry mode two: the fit-first company search
+
+The job signal answers "who is in pain now" and gives up most of the market to do it. A
+fit-first search inverts that. It builds the whole addressable set and accepts that it
+carries no timing.
+
+That trade has a clean resolution here, and it is already decided in `ops/decisions.md`. The
+Gap Report is pre-run and unprompted in cold outreach, which means **D3 is the trigger**. A
+fit-first list does not need the prospect to be doing anything; the report creates the
+moment. The job signal only ever ranked the queue.
+
+### What to write in the description field
+
+A natural-language company search is an inference over company descriptions, so it is good
+at what a company does and poor at how many people it has. Give it the qualitative
+discrimination and leave headcount, country and industry to the structured filters beside
+it.
+
+```
+Independent Medicare insurance agencies in the United States. These are small, locally
+owned retail insurance agencies whose main business is helping people on Medicare choose
+and enroll in Medicare Advantage, Medicare Supplement and Part D plans. They are appointed
+with several carriers and sell those carriers' plans to individual beneficiaries in their
+own community. They have their own local office, their own phone number and their own
+website, typically 3 to 10 licensed agents plus one or two administrative staff, serving
+one state or two to three neighbouring states.
+
+Typical signals: the company name or website domain refers to Medicare, to senior benefits,
+or to the local area it serves; the website lists the carriers it represents and invites
+people to call for a free plan review or consultation; the team page shows a small number
+of named licensed agents; the owner is a licensed agent who appears on the site.
+
+Exclude all of the following:
+- Health insurance carriers and health plans of any kind, including Medicare Advantage
+  plans, Blue Cross entities, HMOs, and county or public health plans.
+- Hospitals, health systems, medical groups, clinics, post-acute, hospice and home health
+  providers.
+- Companies selling software, data, analytics, consulting, revenue cycle, risk adjustment,
+  care management, member engagement or outsourced services to health plans, providers or
+  agencies.
+- Large national or global insurance brokerages and benefits consultancies with hundreds or
+  thousands of employees.
+- Field Marketing Organisations, Insurance Marketing Organisations, General Agencies, and
+  agent recruiting or contracting organisations whose customers are agents rather than
+  beneficiaries.
+- National direct-to-consumer Medicare call centres and online plan marketplaces.
+- Staffing firms, recruiting agencies, job boards and job aggregators.
+- Government agencies, Area Agencies on Aging, and nonprofit counselling programmes such as
+  SHIP or Senior Medicare Patrol.
+- Agencies whose main business is property and casualty, auto, home, commercial, group
+  employee benefits, life-only or final expense.
+```
+
+Short version, where the field will not take the whole thing:
+
+```
+Small independent Medicare insurance agencies in the United States, 3 to 10 licensed
+agents, that sell Medicare Advantage, Medicare Supplement and Part D plans from several
+carriers to individual beneficiaries in their own local area, from their own office, phone
+number and website. Not carriers or health plans, not hospitals or providers, not software
+or services vendors, not national brokerages, not FMOs or agent recruiting organisations,
+not direct-to-consumer Medicare call centres, not staffing firms, not government or
+nonprofit programmes.
+```
+
+### The filters that go beside it, not inside it
+
+| Filter | Value | Why not in the prose |
+|---|---|---|
+| Country | United States | Structured field is exact, prose is not |
+| Industry | Insurance | Removes the whole vendor class in one move |
+| Employee count | 2 to 50, core 3 to 25 | The one filter that removes national brokerages, and the description cannot judge headcount |
+| Company name exclusions | The blocklist above | Cheaper than asking the model to recall specific companies |
+
+The eight-name brokerage class is the reason the headcount filter is not optional here.
+Gallagher, HUB, Alliant, USI, Aon, NFP, Alera and Holmes Murphy all match the positive
+description, are genuinely insurance, and genuinely sell Medicare. Only headcount separates
+them.
+
+### The one signal to rebuild afterwards
+
+A fit list arrives flat, and the scoring columns in this file mostly read job text that no
+longer exists. Two replacements carry most of the weight, and both come from the agency's
+own website: whether a local inbound number is published on the site at all, which is the
+hard ICP-1 qualifier and the thing the Gap Report runs against, and how many named licensed
+agents the team page shows, which is the headcount number worth trusting over any data
+provider's.
 
 ## The calendar, which decides when this runs rather than whether
 
