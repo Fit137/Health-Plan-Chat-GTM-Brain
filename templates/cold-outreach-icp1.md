@@ -128,33 +128,37 @@ list with room to spare, and a message near 290 will truncate on the rows that m
 
 ### The request
 
-224 characters. Nothing is asked for except permission.
+165 characters. A question, not an offer.
 
 ```
-Hi [First name], I'm using AI to read the 2027 plan documents against 2026
-and pull every benefit change, cited to the page. Free, and ready before
-your members start calling about their notice letters. Can I send you a
-copy?
+Hi [First name], most of the calls between October 15 and December 7 are
+one question: what does my plan cover. Are you staffing for that this year,
+or looking at AI?
 ```
 
-### Shorter alternate
+### Alternates
 
-156 characters. Drops the timing and keeps the method.
-
-```
-Hi [First name], I'm using AI to read the 2027 plan documents against 2026
-and pull out every benefit change, cited to the page. Free. Can I send you
-a copy?
-```
-
-### The reply, once they say yes
-
-The plan list is the second ask and it belongs here, never in the request. A yes already
-given makes it easy, and it arrives as a practical question rather than a condition.
+154 characters, sharper on the after-hours gap.
 
 ```
-Which plans does [Agency] sell? I'll start with those.
+Hi [First name], between October 15 and December 7, what picks up the plan
+questions that come in after hours? More hands this year, or is AI on the
+table?
 ```
+
+162 characters, framed on the season rather than the question type.
+
+```
+Hi [First name], the eight weeks from October 15 are the ones that decide
+your year. Are you adding people to cover the inbound this time, or looking
+at AI for it?
+```
+
+### Where the deliverable goes
+
+Not in the request. Whatever they answer, the reply offers the 2027 change report, and only
+then does the plan list get asked for. Three steps, each one smaller than the last thing they
+agreed to.
 
 ### Why it is built this way
 
@@ -163,13 +167,22 @@ on every plan in their book for next year, because the documents are only now pu
 That is what separates this from an audit score or a cheat sheet, both of which told the
 owner something they already believed.
 
-**The request asks for nothing.** It names a gift and asks permission to send it, which is a
-one-word decision with no work behind it. The plan list is real work and it waits for the
-reply, where a yes already given makes it easy to give.
+**The request asks a question rather than offering anything.** An offer in a connection note
+reads as a vendor whatever it contains. A question about the reader's own October reads as a
+peer, and it is answerable in a few words with nothing to look up.
 
-**Permission, not information.** Acceptance and reply are separate decisions on this channel
-and the request has to survive both, so it carries the smallest possible ask. Anything that
-needs the reader to look something up belongs after the yes.
+**The question does the revealing.** Naming what the calls actually are, one question about
+plan coverage, is the whole diagnosis. The owner supplies the rest themselves, because they
+already know how that fortnight goes.
+
+**"Staffing, or AI" is the point and it is not a pitch.** It presents two real options and
+asks which way they lean. `reference/outbound-engine.md` warns that this audience has been
+pitched AI weekly since 2023, and that warning is about being told. Being asked survives it,
+because the reader gets to hold the opinion.
+
+**Nothing to look up.** Acceptance and reply are separate decisions on this channel and the
+request has to survive both, so the answer has to be available without the reader leaving the
+message.
 
 **There is no company name and no capability.** Strip the sender and the note still makes
 sense, which is the test in `ops/QA-checklist.md`. A connection note that describes a product
