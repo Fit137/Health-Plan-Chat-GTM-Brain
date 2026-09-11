@@ -128,22 +128,32 @@ list with room to spare, and a message near 290 will truncate on the rows that m
 
 ### The request
 
-211 characters. No merge field, because the offer is specific without one.
+224 characters. Nothing is asked for except permission.
 
 ```
-Your members get their Annual Notice of Change letters by September 30 and
-the calls start the week after. Tell me which plans you sell and I'll send
-you every 2027 change, cited to the page. No charge. Want it?
+Hi [First name], I'm using AI to read the 2027 plan documents against 2026
+and pull every benefit change, cited to the page. Free, and ready before
+your members start calling about their notice letters. Can I send you a
+copy?
 ```
 
-### Alternate, naming the method
+### Shorter alternate
 
-210 characters. Leads on the documents and says where AI sits.
+156 characters. Drops the timing and keeps the method.
 
 ```
-The 2027 Summary of Benefits documents land this month. Tell me which plans
-you sell and I'll run them against the 2026 versions and send you every
-change, cited to the page. AI does the reading. Free. Want it?
+Hi [First name], I'm using AI to read the 2027 plan documents against 2026
+and pull out every benefit change, cited to the page. Free. Can I send you
+a copy?
+```
+
+### The reply, once they say yes
+
+The plan list is the second ask and it belongs here, never in the request. A yes already
+given makes it easy, and it arrives as a practical question rather than a condition.
+
+```
+Which plans does [Agency] sell? I'll start with those.
 ```
 
 ### Why it is built this way
@@ -153,9 +163,13 @@ on every plan in their book for next year, because the documents are only now pu
 That is what separates this from an audit score or a cheat sheet, both of which told the
 owner something they already believed.
 
-**The ask is the conversion.** We need their plan list to build the sheet, so the reply the
-deliverable requires is the reply we want. There is no second conversion step and no meeting
-request anywhere in the first touch.
+**The request asks for nothing.** It names a gift and asks permission to send it, which is a
+one-word decision with no work behind it. The plan list is real work and it waits for the
+reply, where a yes already given makes it easy to give.
+
+**Permission, not information.** Acceptance and reply are separate decisions on this channel
+and the request has to survive both, so it carries the smallest possible ask. Anything that
+needs the reader to look something up belongs after the yes.
 
 **There is no company name and no capability.** Strip the sender and the note still makes
 sense, which is the test in `ops/QA-checklist.md`. A connection note that describes a product
