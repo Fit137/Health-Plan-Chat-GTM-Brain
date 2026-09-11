@@ -239,6 +239,51 @@ Industry set to Insurance plus employee count under 500 removes Oracle, Deloitte
 Mercor and Epic in one pass, without any of them being named. Use the names for what
 survives.
 
+## Measured: the first run, 2026-09-11
+
+Eighty-two companies from a Medicare-title job search, classified one by one against the
+ICP. The result sets the expectation for every later run.
+
+| Verdict | Count |
+|---|---|
+| Delete | 72 |
+| Verify | 4 |
+| Keep, ICP-1 candidate | 6 |
+
+**A title-only Medicare search runs at roughly a 7 to 12 per cent ICP hit rate.** That is
+the number to plan capacity against. It is not a broken search: the titles worked, and
+every one of the 72 is a genuine Medicare role. They are just at organisations that are not
+independent agencies.
+
+What the 72 were, in descending order of volume:
+
+| Class | Roughly | Examples from the run |
+|---|---|---|
+| Carriers and health plans | 22 | Humana, Centene, Molina, CareSource, Highmark, SCAN, HMSA, Solis |
+| Vendors selling to Medicare organisations | 13 | HealthEdge, Verisk, Infinx, CorroHealth, Centauri, Ceresti, Germane |
+| Providers and health systems | 9 | Kaiser, Geisinger, Intermountain, OhioHealth, Orlando Health |
+| National and global brokerages | 8 | Gallagher, HUB, Alliant, USI, Aon, NFP, Alera, Holmes Murphy |
+| FMOs, GAs and captive distribution | 7 | Integrity, AmeriLife, Advocate Health Advisors, National Contracting Center |
+| Staffing firms and job aggregators | 6 | Medix, Calculated Hire, Pyramid, Slate, VetJobs, Jobgether |
+| Government and nonprofit | 4 | Commonwealth of Kentucky, City of New York, AgeOptions |
+
+Three findings worth carrying forward.
+
+**The national brokerage class was missing from every exclusion list in this file.** Gallagher,
+HUB, Alliant, USI, Aon, NFP, Alera and Holmes Murphy are insurance, they do sell Medicare,
+and they are nothing like a 3 to 10 agent agency. An industry filter set to Insurance keeps
+all eight. Only headcount removes them.
+
+**The row count overstates the opportunity.** Aon and NFP were the same job posted twice,
+and Jobgether was reposting Ceresti's. Deduplicate on job title plus location before
+counting.
+
+**The keepers look like what the ICP describes.** Domains such as medicareplansneo.com and
+signaturemedicaresolutions.com are local Medicare agencies naming themselves after the thing
+they sell in the county they sell it in. That pattern is a better ICP-1 detector than any
+title string, and it is worth a column: an exact-match or near-match domain is a strong
+signal, a corporate domain is a weak one.
+
 ## What no keyword can do
 
 The title lists above return Medicare roles at Medicare organisations. They do not return
