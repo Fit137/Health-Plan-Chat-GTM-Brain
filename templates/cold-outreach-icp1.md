@@ -184,72 +184,62 @@ number, and settle the test on the third.
 
 ### Step 1, on acceptance. The offer
 
-Sixty-two words. Opens on the AI rather than working towards it.
+The founder's own wording, with the two missing articles fixed and the ask pointed at a
+demonstration. Do not rewrite the voice of this one.
 
 ```
-Hi [First name],
+[First name],
 
-There's AI now that answers what a caller's plan actually covers. The
-dental allowance, the OTC card, a specialist copay. Not just picking up
-the phone.
+October 15th could be an outlier year for [Agency] by using AI to handle a
+bigger scale of inbound demand.
 
-For the eight weeks from October 15 that is the difference between
-covering the inbound surge and losing calls to it, and it could make this
-an outlier year for [Agency].
+This is not AI that just picks up the phone, it is AI that answers what the
+caller's plan actually covers.
 
-Want me to show you?
+May I show you how?
 ```
 
-**The first line is the whole message.** An opening that circles the subject before naming it
-spends the only sentence the reader is guaranteed to read. This one states what the thing does
-and what it is not, and the three named benefits do the work an adjective would do worse.
+Forty-three words. The date leads because it is the only fixed thing in the reader's year.
+The second line is the only addition the extra space buys, and it exists because without it
+the reader files this with every product that answers a phone.
 
-**"Want me to show you" points at a live demonstration without naming one.** Never "book a
-demo", never a calendar link in a first touch: `reference/outbound-engine.md` is explicit that
-the positioning attacks the demo gate and opening with one contradicts it. Showing is not
-gating, and `reference/positioning.md` puts demonstration rather than persuasion at the centre
-of how this product is bought.
-
-It is a larger ask than sending something, and the trade is deliberate. A live demonstration
-is where this wins, so the sequence aims there rather than at a document.
+**Edits made to the original and nothing else.** "Could be outlier year" and "bigger scale"
+were missing their articles, which reads as a typo to this reader. "Send" became "show",
+because the next step is a live session rather than a document.
 
 ### Step 2, four days later if no reply. Give it anyway
 
 ```
-Hi [First name],
+[First name],
 
-Rather than wait on a yes, here is the short version.
+Following up on the above.
 
-Most AI put in front of you answers the phone. It picks up, takes a
-message, gets the caller to a human eventually. What it cannot do is tell
-someone what the dental allowance is on their plan, because it has never
-read their plan.
+Most AI that agencies get shown just picks up the phone and takes a
+message. It cannot tell a caller what the dental allowance is on their
+plan, because it has never read their plan.
 
-There is a version that has. It reads the Summary of Benefits for the
-plans you sell, so when a caller asks about the OTC card on a specific
-plan the answer comes from the carrier's own document, in your agency's
-name, at nine on a Sunday. Anything it cannot resolve goes to one of your
-licensed agents with the conversation attached.
+This one reads the Summary of Benefits for the plans you sell, so it
+answers from the carrier's own document, in your agency's name, at any
+hour. Anything it cannot answer goes to one of your licensed agents with
+the conversation attached.
 
-It's easier to hear than to read. Say when and I'll show you.
+It is easier to show than to explain. Say when.
 ```
 
-One hundred and thirty-six words, and **not a reminder.** Chasing a yes is asking twice for
-the same thing. Sending the substance unasked is the asset-before-ask thesis in
-`reference/outbound-engine.md` applied to a channel where the asset costs nothing to deliver,
-and it leaves the reader holding something whether or not they ever reply.
-
-"Easier to hear than to read" is the close, and it is true rather than a device: the product
-is a voice on a phone line, so hearing it is the demonstration. It points at the same live
-session step one offered without repeating the question.
+Ninety-four words, and not a reminder. Chasing a yes is asking twice for the same thing.
 
 Every capability named is SHIPPED in `rules/feature-status.md`: plan-grounded answers from
 ingested Summary of Benefits and Evidence of Coverage, 24/7 answering, agency-branded
 greeting, escalation with the conversation carried across. Appointment booking and Scope of
-Appointment capture are absent on purpose, and no sentence may imply either.
+Appointment capture are absent on purpose.
 
-The surge line from step 1 does not repeat here. One idea, stated once, in the message where
-it does the most work.
+### The voice rule for this sequence
+
+These are the founder's sentences. Plain compound statements, no lists of three, no dashes,
+no constructions that begin "there's a way to". Any future edit fixes grammar and claim
+status only. A rewrite that reads better and sounds like somebody else is a worse asset,
+because this audience can hear the difference and the whole motion depends on sounding like a
+person who runs a business rather than a person who writes copy.
 
 ### If there is still no reply
 
