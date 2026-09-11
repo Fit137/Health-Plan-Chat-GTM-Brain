@@ -1097,6 +1097,58 @@ It scores fit, never pain. A website cannot show whether calls go unanswered at 
 Sunday, which is the thing we most want to know and the thing the Gap Report exists to find
 out. This gate decides who is worth running the report on. It does not decide who needs it.
 
+## Cleaning the agency name for the merge field
+
+`[Agency]` lands mid-sentence in touch 1, so the test is not tidiness. It is whether the
+value reads naturally in "Want me to run it on ___?" A name that survives that reads as
+though a person wrote the line. One that does not marks the whole email as generated.
+
+Measured across 997 agency names: 234 carry a legal suffix, 109 contain a comma, 49 are in
+capitals throughout, and 51 run to six words or more, usually because a tagline or a list of
+states has been welded on. The mean is 3.4 words, so most rows need suffix removal and
+nothing else.
+
+This is string work, not research. The column reads the name only and never opens the site.
+
+```
+Clean this company name so it reads naturally in a sentence like
+"Want me to run it on ___?"
+
+Name: {{Name}}
+
+Rules:
+1. Use only the text given. Do not look anything up and do not add words.
+2. Remove legal suffixes: LLC, L.L.C., Inc, Incorporated, Corp, Corporation, Co., Company as
+   a suffix, Ltd, LP, LLP, PLLC, PA. Keep the suffix if removing it would leave fewer than
+   two words.
+3. Remove anything after a dash, pipe, colon or comma that is a tagline, a slogan, a
+   description of services, a person's name, or a list of states. Keep it only where it is
+   part of the name itself.
+4. Where the name contains "dba", keep the name that follows it and drop the rest.
+5. If the name is in capitals throughout, convert to title case. Otherwise keep the
+   capitalisation as given.
+6. If more than four words remain, drop generic trailing words in this order until four or
+   fewer remain: Services, Service, Solutions, Consultants, Consulting, Center, Group,
+   Agency, Insurance. Stop early if dropping the next word would leave something that no
+   longer reads as the name of a business.
+7. Keep ampersands, apostrophes and personal surnames.
+8. Return "" if what remains cannot be used as a name in that sentence, for example a web
+   address or a generic phrase.
+
+Return this JSON only:
+{"clean_name":""}
+```
+
+Two rules carry the weight. **Rule 6 drops "Insurance" last**, so "Blue Sky Insurance" keeps
+its trade rather than collapsing to "Blue Sky", and the stop-early clause is what prevents
+"Ahrens Benefits Company" becoming "Ahrens". **Rule 8 is the failure path**: an empty value
+is the signal to hold the row rather than send it, because a broken merge field in the first
+line is worse than not sending.
+
+Eyeball the tail before trusting the column. Sort by word count descending and read the top
+fifty, then read every row where `clean_name` came back empty. Those two slices contain
+essentially all the errors.
+
 ## The calendar, which decides when this runs rather than whether
 
 Sourcing and outreach come apart here, and the seasonal rule in `outbound-engine.md` binds
