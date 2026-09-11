@@ -278,6 +278,107 @@ it on, take the company names, add them here, turn it off.
 noise, it is ICP-2. Send it to the B1 LinkedIn track and title-verify it there. The two
 tracks never merge, so it must not enter the A1 sequence.
 
+## Who to contact inside the company
+
+The job search returns a company. The Gap Report goes to a person, and in ICP-1 that is
+one person.
+
+**The owner, on the first touch, and nobody else.** ICP-1 has no committee. The owner
+decides, is usually also the top producer, and is the person who answers the hard plan
+questions personally. There is nobody to route around and no consensus to build.
+
+The consultative framing makes that sharper rather than softer. The Gap Report is a finding
+about a licensed entity: their line, in their agency's name, failing a question a
+beneficiary asked. Everyone in that building can read it. One person owns the exposure in
+it, and that is the principal broker.
+
+### Titles to include — primary
+
+```
+Owner, Agency Owner, Owner and Agent, Founder, Co-Founder, President, Principal, Principal
+Broker, Broker Owner, Managing Broker, Managing Partner, Partner, Agency Principal,
+Managing Director, Chief Executive Officer, CEO, Proprietor
+```
+
+### Titles to include — verify before sending
+
+At this company size the owner often describes themselves by what they do rather than by
+what they own.
+
+```
+Independent Insurance Agent, Independent Insurance Broker, Independent Broker, Independent
+Medicare Broker, Insurance Broker, Medicare Broker, Licensed Insurance Broker
+```
+
+Every one of these is also what an employee at the same agency is called. They qualify only
+once one of the owner tests below passes. Sending to an unverified one puts the offer in
+front of Level 1, which is the worst available outcome and the subject of the next list.
+
+### Titles to exclude on the first touch
+
+```
+Licensed Insurance Agent, Medicare Agent, Medicare Sales Agent, Sales Agent, Producer,
+Sales Representative, Account Executive, Customer Service Representative, Client Services
+Representative, Enrollment Specialist, Receptionist, Administrative Assistant, Marketing
+Coordinator, Marketing Manager, Recruiter, Talent Acquisition, Intern
+```
+
+These are Level 1 of the buying committee. They hold no formal influence and a real veto,
+and the documented reason they block is fear of replacement.
+
+An audit of the phone line they personally answer reads to them as a business case for
+removing their job. It hands the one person who can quietly kill the deal a motive to. This
+list is the most important one in this section.
+
+### The fallback tier, and when it applies
+
+```
+Agency Manager, Operations Manager, Director of Operations, Office Manager, General
+Manager, Operations Lead, Business Manager
+```
+
+Two cases only: no owner is identifiable after the tests below, or the agency sits at the 8
+to 10 agent end where a real operations hire exists. This is Level 2, which shapes the
+shortlist and runs the trial. A good second best and a poor default.
+
+### One contact per company
+
+Not two. In a five-person agency the owner and the office manager sit in the same room and
+compare notes, so two near-identical approaches in one week reads as a sequence rather than
+as a person. It also costs the sending domain for no gain.
+
+### Finding the owner when the title does not say so
+
+Titles at this size are unreliable in both directions. Six tests, cheapest first.
+
+| Test | What it catches |
+|---|---|
+| Seniority filter set to owner, founder, partner or C-suite | The straightforward majority |
+| Surname appears in the company name | High precision at this size. Smith Insurance Group, and a John Smith |
+| The contact attached to the job post | At a four-agent agency the person hiring is the person who signs |
+| Only profile at the company without an agent or service title | Works where the team page is thin |
+| Start date matches the company founding year | Separates the founder from a long-tenured producer |
+| Named as principal or broker of record on the agency website | Slowest, and the only one that also confirms the licence |
+
+The second test is the one that pays. Independent agencies are named after their owners far
+more often than software companies are.
+
+### What raises reply odds inside the owner tier
+
+Rank the owners, do not just collect them. Three things move the reply rate, and all three
+come from work already done in this file.
+
+An owner whose agency has two or more roles open is scaling past their systems. An owner
+named directly on the job post has already put their name to the capacity problem. An owner
+whose own line failed the Gap test on a plan they actively sell is the one who cannot put
+the finding down.
+
+### The ICP-2 branch
+
+If the company routing step sent the account to ICP-2, this entire section is void. The B1
+target is the Director of Operations first and the principal second, and the two tracks
+never merge. An ICP-2 prospect reached with an ICP-1 approach is a prospect spent.
+
 ## Scoring columns, built from the job text
 
 These rank the pool. None of them belongs in the search filter, because each one used as a
