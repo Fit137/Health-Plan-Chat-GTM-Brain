@@ -128,30 +128,44 @@ list with room to spare, and a message near 290 will truncate on the rows that m
 
 ### The request
 
-186 characters at the longest merge.
-
-```
-Hi [First name], I think October 15 could be an outlier year for [Agency],
-if the inbound is handled differently. It's an AI setup. Can I send you how?
-```
-
-### Alternates
-
-175 characters, no agency merge, framed on what separates this year.
-
-```
-Hi [First name], the difference this October 15 is going to be which
-agencies fixed their inbound before it started, not during. I can send you
-how to do that with AI. Want it?
-```
-
-201 characters, states the upside more directly.
+260 characters against the longest agency name in the table. Check it against that name, not
+the average one, because this variant is close to the cap.
 
 ```
 Hi [First name], there's a way to use AI on your inbound before October 15
-that I think puts [Agency] well ahead of where it would otherwise land.
+that answers what a caller's plan covers, not just picks up. I think it
+puts [Agency] well ahead of where it would otherwise land. Can I send you
+how?
+```
+
+### Alternate, contrast first
+
+269 characters. Leads on the distinction rather than arriving at it.
+
+```
+Hi [First name], most AI answers the phone. There's a way to use AI that
+answers what the caller's plan actually covers, and having it in before
+October 15 puts [Agency] well ahead of where it would otherwise land.
 Can I send you how?
 ```
+
+### The eight words carrying the positioning
+
+"Answers what a caller's plan covers, not just picks up" is the whole competitive argument in
+plain English, and it is the clause that has to survive any edit.
+
+Without it the message offers AI on the inbound, which is what a $79 receptionist offers.
+`reference/feature-matrix.md` is unambiguous that anything a commodity assistant also does is
+not a story we can win on, and all six differentiators are Medicare plan IP. The contrast is
+not decoration on the value proposition, it **is** the value proposition, compressed.
+
+It also states our side of the distinction in `rules/glossary.md` that must never blur. We
+answer the beneficiary. Lead capture and agent-facing tools answer somebody else. A reader who
+takes "AI on your inbound" to mean call answering has put us in the wrong category before
+replying, and the clause is what prevents that.
+
+What it does not do is name a product, claim a customer, or promise a number, which is what
+keeps it sendable.
 
 ### The claim line this variant walks
 
