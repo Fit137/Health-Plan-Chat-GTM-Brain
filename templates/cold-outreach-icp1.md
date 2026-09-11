@@ -184,29 +184,34 @@ number, and settle the test on the third.
 
 ### Step 1, on acceptance. The offer
 
-Sixty-nine words. The only ask in it is permission to send something.
+Sixty-two words. Opens on the AI rather than working towards it.
 
 ```
 Hi [First name],
 
-October 15 could be an outlier year for [Agency], if the inbound gets
-handled differently this time.
+There's AI now that answers what a caller's plan actually covers. The
+dental allowance, the OTC card, a specialist copay. Not just picking up
+the phone.
 
-There's a way to use AI that answers what a caller's plan actually covers,
-rather than just picking up the phone. Over those eight weeks that is the
-difference between covering the surge and losing calls to it.
+For the eight weeks from October 15 that is the difference between
+covering the inbound surge and losing calls to it, and it could make this
+an outlier year for [Agency].
 
-May I send you how it works? One page, no call.
+Want me to show you?
 ```
 
-The space beyond the connection note buys exactly two things and no more. The line
-distinguishing this from a product that answers the phone, which is the positioning and
-cannot be cut. And "one page, no call", which tells the reader what saying yes costs them.
-Everything else the extra characters could hold is padding.
+**The first line is the whole message.** An opening that circles the subject before naming it
+spends the only sentence the reader is guaranteed to read. This one states what the thing does
+and what it is not, and the three named benefits do the work an adjective would do worse.
 
-**Nothing here asks the reader to do work.** No question to answer, no number to look up, no
-list to send. The give-to-ask ratio on a first touch is the whole game with this audience, and
-permission to receive something is the smallest ask that exists.
+**"Want me to show you" points at a live demonstration without naming one.** Never "book a
+demo", never a calendar link in a first touch: `reference/outbound-engine.md` is explicit that
+the positioning attacks the demo gate and opening with one contradicts it. Showing is not
+gating, and `reference/positioning.md` puts demonstration rather than persuasion at the centre
+of how this product is bought.
+
+It is a larger ask than sending something, and the trade is deliberate. A live demonstration
+is where this wins, so the sequence aims there rather than at a document.
 
 ### Step 2, four days later if no reply. Give it anyway
 
@@ -226,13 +231,17 @@ plan the answer comes from the carrier's own document, in your agency's
 name, at nine on a Sunday. Anything it cannot resolve goes to one of your
 licensed agents with the conversation attached.
 
-The longer version is a page, and it is yours whenever you want it.
+It's easier to hear than to read. Say when and I'll show you.
 ```
 
-One hundred and thirty-five words, and **not a reminder.** Chasing a yes is asking twice for
+One hundred and thirty-six words, and **not a reminder.** Chasing a yes is asking twice for
 the same thing. Sending the substance unasked is the asset-before-ask thesis in
 `reference/outbound-engine.md` applied to a channel where the asset costs nothing to deliver,
 and it leaves the reader holding something whether or not they ever reply.
+
+"Easier to hear than to read" is the close, and it is true rather than a device: the product
+is a voice on a phone line, so hearing it is the demonstration. It points at the same live
+session step one offered without repeating the question.
 
 Every capability named is SHIPPED in `rules/feature-status.md`: plan-grounded answers from
 ingested Summary of Benefits and Evidence of Coverage, 24/7 answering, agency-branded
