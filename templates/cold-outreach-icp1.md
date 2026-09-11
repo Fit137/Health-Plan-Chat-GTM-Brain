@@ -182,62 +182,65 @@ acceptance and can raise reply quality, so reply rate among those who accepted f
 by hiding everyone the note turned away. Record acceptance rate, reply rate and the compound
 number, and settle the test on the third.
 
-### Step 1, on acceptance. The intrigue
+### Step 1, on acceptance. The offer
 
-No AI, no product, no offer. A real question about their own October, which is the fastest
-thing to reply to and the only one that does not read as a sequence.
-
-```
-Hi [First name], a question about the next eight weeks.
-
-From October 15 most of your inbound is one question asked in different
-words. What does my plan cover. The dental allowance, the OTC card, a
-specialist copay.
-
-The part I'd want to know if I ran [Agency]: how many of those get answered
-on the first call, and how many turn into a callback.
-
-Do you track that?
-```
-
-Sixty-one words. The question is the point, not a device. Most owners cannot answer it, and
-noticing that they cannot is the whole reveal, arrived at privately.
-
-### Step 2, four days later if no reply. The value proposition
+Sixty-nine words. The only ask in it is permission to send something.
 
 ```
-Hi [First name], following on from that.
+Hi [First name],
 
-The reason I asked is that most AI put in front of you answers the phone.
-It picks up, it takes a message, it gets the caller to a human eventually.
-What it cannot do is tell someone what the dental allowance is on their
-plan, because it has never read their plan.
+October 15 could be an outlier year for [Agency], if the inbound gets
+handled differently this time.
 
-There is a version now that has. It reads the Summary of Benefits for the
-plans you actually sell, so when a caller asks about the OTC card on a
-specific plan, the answer comes from the carrier's own document, in your
-agency's name, at nine on a Sunday. Anything it cannot resolve goes to one
-of your licensed agents with the whole conversation attached.
+There's a way to use AI that answers what a caller's plan actually covers,
+rather than just picking up the phone. Over those eight weeks that is the
+difference between covering the surge and losing calls to it.
 
-Between October 15 and December 7 that is the difference between covering
-the surge and losing calls to it.
-
-I can send you how it is set up. One page, no call. Want it?
+May I send you how it works? One page, no call.
 ```
 
-One hundred and fifty-four words. Every capability named is SHIPPED in
-`rules/feature-status.md`: plan-grounded answers from ingested Summary of Benefits and
-Evidence of Coverage, 24/7 answering, agency-branded greeting, escalation with the
-conversation carried across.
+The space beyond the connection note buys exactly two things and no more. The line
+distinguishing this from a product that answers the phone, which is the positioning and
+cannot be cut. And "one page, no call", which tells the reader what saying yes costs them.
+Everything else the extra characters could hold is padding.
 
-**What is deliberately absent.** Appointment booking and Scope of Appointment capture, which
-are the two the reader asks about next and neither ships. The first draft of this message said
-competing AI "maybe books something", which is true and invites exactly that question, so it
-came out. No price, no company in the body, no customer of any kind.
+**Nothing here asks the reader to do work.** No question to answer, no number to look up, no
+list to send. The give-to-ask ratio on a first touch is the whole game with this audience, and
+permission to receive something is the smallest ask that exists.
 
-**Why the contrast leads.** "Most AI answers the phone, this one has read the plan" is the
-positioning compressed, and without it the reader files this with every receptionist product
-they have been pitched since 2023.
+### Step 2, four days later if no reply. Give it anyway
+
+```
+Hi [First name],
+
+Rather than wait on a yes, here is the short version.
+
+Most AI put in front of you answers the phone. It picks up, takes a
+message, gets the caller to a human eventually. What it cannot do is tell
+someone what the dental allowance is on their plan, because it has never
+read their plan.
+
+There is a version that has. It reads the Summary of Benefits for the
+plans you sell, so when a caller asks about the OTC card on a specific
+plan the answer comes from the carrier's own document, in your agency's
+name, at nine on a Sunday. Anything it cannot resolve goes to one of your
+licensed agents with the conversation attached.
+
+The longer version is a page, and it is yours whenever you want it.
+```
+
+One hundred and thirty-five words, and **not a reminder.** Chasing a yes is asking twice for
+the same thing. Sending the substance unasked is the asset-before-ask thesis in
+`reference/outbound-engine.md` applied to a channel where the asset costs nothing to deliver,
+and it leaves the reader holding something whether or not they ever reply.
+
+Every capability named is SHIPPED in `rules/feature-status.md`: plan-grounded answers from
+ingested Summary of Benefits and Evidence of Coverage, 24/7 answering, agency-branded
+greeting, escalation with the conversation carried across. Appointment booking and Scope of
+Appointment capture are absent on purpose, and no sentence may imply either.
+
+The surge line from step 1 does not repeat here. One idea, stated once, in the message where
+it does the most work.
 
 ### If there is still no reply
 
