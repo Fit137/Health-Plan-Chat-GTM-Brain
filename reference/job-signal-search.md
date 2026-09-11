@@ -177,6 +177,63 @@ Do not filter to the dense states. ICP-1 is densest in FL, TX, AZ, CA, PA, OH, N
 but that is a ranking input, not a boundary, and eight states would cut the pool by more
 than half for no gain in fit. Carry the state as a column and sort on it.
 
+## Has recruiter — leave it off
+
+The toggle filters to posts where a recruiter or hiring contact has been identified and
+attached. Confirm that reading on one run before relying on it, because the label is the
+only evidence of what it does.
+
+Off is right for A1, and the reason is the ICP rather than the pool size.
+
+An ICP-1 agency has 3 to 10 licensed agents and 1 to 2 admin, no marketing hire and no ops
+hire. There is no recruiter in the building. The owner writes the post, and the owner is
+also the top producer and the person who signs. So a recruiter attached to a Medicare job
+post is a size signal, and it points the wrong way: a talent function exists, which means
+the company is a carrier, a national call centre, a Field Marketing Organisation or a
+staffing firm. That is the exclusion list, not the pool.
+
+On also costs coverage on top of fit. Any "has X" toggle drops every post the provider
+could not enrich, and enrichment on small local employers is thin. The pool gets cut
+twice, once for company size and once for data coverage, and both cuts land on the ICP.
+
+### The contact it returns is the wrong contact
+
+This holds separately from the size argument, and it holds even where the enrichment is
+good.
+
+A1 goes to the owner. In ICP-2 the true buyer is the Director of Operations and the
+principal signs. A recruiter is neither, in either track. Their incentive also runs
+against ours specifically: they are paid to fill the seat, and our argument is that the
+seat costs more than the coverage does. Of everyone in that building, the recruiter is the
+one person whose job our product argues against.
+
+### Two ways to use it without filtering on it
+
+Keep it as a column rather than a gate.
+
+**Harvest the exclusion list with it on.** Run one pass with the toggle on and nothing else
+changed. The companies that come back are close to the company-exclusion list below, built
+from live data in twenty minutes instead of from memory. Then turn it off.
+
+**Route on it.** Recruiter present is a rough ICP-1 and ICP-2 splitter. Agent recruiting is
+a core Field Marketing Organisation function, so an FMO or General Agency post usually
+carries a recruiter and a four-agent agency in Ocala never does. Hits go to B1, misses go
+to A1.
+
+### The test that decides which of those applies
+
+On a small agency post the attached hiring contact is sometimes the owner rather than a
+recruiter, and that changes the answer. Run the toggle on over one sample and read the
+titles that come back.
+
+| What the titles say | What the field is | What to do with it |
+|---|---|---|
+| Recruiter, Talent Acquisition, HR | A company-size proxy | Keep it off, use it inverted as above |
+| Owner, Principal, Agency Manager | Decision-maker enrichment on ICP-sized companies | Keep it off, but carry the contact as a column into the outreach step |
+
+Neither outcome makes it a filter. In the second case the posts it misses are not
+disqualified, they are just missing a contact we can find another way.
+
 ## What the panel cannot do, and what has to happen after import
 
 The search returns jobs. The ICP is a company, so three filters have to run on the
