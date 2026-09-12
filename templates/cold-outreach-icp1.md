@@ -184,28 +184,21 @@ number, and settle the test on the third.
 
 ### Step 1, on acceptance. The offer
 
-The founder's own wording, with the two missing articles fixed and the ask pointed at a
-demonstration. Do not rewrite the voice of this one.
+The founder's wording. Do not rewrite it.
 
 ```
-[First name],
-
-October 15th could be an outlier year for [Agency] by using AI to handle a
-bigger scale of inbound demand.
-
-This is not AI that just picks up the phone, it is AI that answers what the
-caller's plan actually covers.
-
-May I show you how?
+[First name], October 15 could kick off a record AEP for [Agency]. AI can
+help you handle the increased call volume. May I show you how?
 ```
 
-Forty-three words. The date leads because it is the only fixed thing in the reader's year.
-The second line is the only addition the extra space buys, and it exists because without it
-the reader files this with every product that answers a phone.
+Fallback, for when a variable fails to resolve. 123 characters, no variables.
 
-**Edits made to the original and nothing else.** "Could be outlier year" and "bigger scale"
-were missing their articles, which reads as a typo to this reader. "Send" became "show",
-because the next step is a live session rather than a document.
+```
+October 15 could kick off a record AEP for your agency. AI can help you handle the increased call volume. May I show you how?
+```
+
+The fallback drops the name greeting rather than replacing it, and "your agency" stands in
+for the company name. Nothing else changes.
 
 ### Step 2, four days later if no reply. Give it anyway
 
