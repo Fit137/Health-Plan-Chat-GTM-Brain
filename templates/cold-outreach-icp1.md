@@ -249,16 +249,19 @@ Four subjects to test. Every word sits inside a spin block:
 {{a record AEP for|a record-setting AEP for|your biggest AEP for}} {{company name}}
 ```
 
-Body, 729 combinations, no bare text:
+Body, 729 combinations:
 
 ```
-{{first name}}{{, October 15|, Oct 15|, October 15th}} {{could kick off|could be the start of|could mark the start of}} {{a record AEP for|a record-setting AEP for|your biggest AEP for}} {{company name}}{{. AI can help you handle|. AI can help you take on|. AI can help you cover}} {{the increased call volume.|the jump in call volume.|the extra call volume.}} {{May I show you how?|Can I show you how?|Want me to show you how?}}
+{{first name}}, {{October 15|Oct 15|October 15th}} {{could kick off|could be the start of|could mark the start of}} {{a record AEP for|a record-setting AEP for|your biggest AEP for}} {{company name}}. {{AI can help you handle|AI can help you take on|AI can help you cover}} {{the increased call volume.|the jump in call volume.|the extra call volume.}} {{May I show you how?|Can I show you how?|Want me to show you how?}}
 ```
 
-**Connectives and punctuation are absorbed into the adjacent block** rather than left bare or
-padded with a dummy spin of identical options. "for", the commas and the full stops all ride
-inside a neighbouring block, which is how every word ends up spun without a single filler
-variant.
+**Punctuation ends a block, never starts one.** An option beginning with a comma or a full
+stop is read as a variable name by Instantly rather than as spin, and the send fails the
+template check. The same goes for two blocks written back to back with no space between them.
+
+The comma after the first name and the full stop after the company name therefore sit outside
+any block, because the element before each is a variable and a variable cannot carry them.
+Those two marks are the only characters in the body that are not inside a spin block.
 
 **Meaning never moves.** AI appears in all three options of its block, AEP in all three of
 its, and the date varies only in format. Only the connective phrasing changes, so all 729
