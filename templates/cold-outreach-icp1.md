@@ -252,16 +252,20 @@ Four subjects to test. Every word sits inside a spin block:
 Body, 729 combinations:
 
 ```
-{{first name}}, {{October 15|Oct 15|October 15th}} {{could kick off|could be the start of|could mark the start of}} {{a record AEP for|a record-setting AEP for|your biggest AEP for}} {{company name}}. {{AI can help you handle|AI can help you take on|AI can help you cover}} {{the increased call volume.|the jump in call volume.|the extra call volume.}} {{May I show you how?|Can I show you how?|Want me to show you how?}}
+{{first name}}, {{October 15|Oct 15|October 15th}} {{could kick off|could be the start of|could mark the start of}} {{a record AEP for|a record-setting AEP for|your biggest AEP for}} {{company name}}. {{AI can help you handle|AI can help you take on|AI can help you cover}} {{the increased call volume|the jump in call volume|the extra call volume}}. {{May I show you how|Can I show you how|Want me to show you how}}?
+
 ```
 
-**Punctuation ends a block, never starts one.** An option beginning with a comma or a full
-stop is read as a variable name by Instantly rather than as spin, and the send fails the
-template check. The same goes for two blocks written back to back with no space between them.
+**No punctuation inside a spin block, anywhere.** Instantly reads a block containing a comma,
+full stop or question mark as a variable name rather than as spin, and the template check
+fails on it whether the mark leads or trails. Two blocks written back to back with no space
+between them fail the same way.
 
-The comma after the first name and the full stop after the company name therefore sit outside
-any block, because the element before each is a variable and a variable cannot carry them.
-Those two marks are the only characters in the body that are not inside a spin block.
+Every mark therefore sits outside: the comma after the first name, the two full stops, and
+the closing question mark. They are the only characters in the body not inside a block.
+
+The hyphen in "record-setting" is the one piece of punctuation left inside a block and it
+passes. If a warning ever names that block, the hyphen is the cause.
 
 **Meaning never moves.** AI appears in all three options of its block, AEP in all three of
 its, and the date varies only in format. Only the connective phrasing changes, so all 729
