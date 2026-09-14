@@ -240,20 +240,29 @@ Same copy, same voice. Subject lines carry the company variable; none of them ca
 word AI, because `reference/outbound-engine.md` lists AI in a subject line as a hook pattern
 that does not work on this audience.
 
-Four subjects to test, spun:
+Four subjects to test. Every word sits inside a spin block:
 
 ```
-October 15 {{at|for}} {{company name}}
-{{company name}} {{before|ahead of}} October 15
-{{AEP call volume|AEP prep|the AEP rush}} at {{company name}}
-{{a record AEP|a record-setting AEP|your biggest AEP}} for {{company name}}
+{{October 15 at|October 15 for|Oct 15 at}} {{company name}}
+{{company name}} {{before October 15|ahead of October 15|before Oct 15}}
+{{AEP call volume at|AEP prep at|the AEP rush at}} {{company name}}
+{{a record AEP for|a record-setting AEP for|your biggest AEP for}} {{company name}}
 ```
 
-Body, spun. 243 combinations:
+Body, 729 combinations, no bare text:
 
 ```
-{{first name}}, October 15 {{could kick off|could be the start of|could mark the start of}} {{a record AEP|a record-setting AEP|your biggest AEP}} for {{company name}}. AI can {{help you handle|help you take on|help you cover}} {{the increased call volume|the jump in call volume|the extra call volume}}. {{May I show you how?|Can I show you how?|Want me to show you how?}}
+{{first name}}{{, October 15|, Oct 15|, October 15th}} {{could kick off|could be the start of|could mark the start of}} {{a record AEP for|a record-setting AEP for|your biggest AEP for}} {{company name}}{{. AI can help you handle|. AI can help you take on|. AI can help you cover}} {{the increased call volume.|the jump in call volume.|the extra call volume.}} {{May I show you how?|Can I show you how?|Want me to show you how?}}
 ```
+
+**Connectives and punctuation are absorbed into the adjacent block** rather than left bare or
+padded with a dummy spin of identical options. "for", the commas and the full stops all ride
+inside a neighbouring block, which is how every word ends up spun without a single filler
+variant.
+
+**Meaning never moves.** AI appears in all three options of its block, AEP in all three of
+its, and the date varies only in format. Only the connective phrasing changes, so all 729
+renders say the same thing.
 
 **Instantly uses the same double braces for variables and for spin**, so a variable must never
 sit inside a spin block. Nothing is spun that carries meaning: not the date, not the word AI,
