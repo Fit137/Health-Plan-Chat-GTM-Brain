@@ -234,6 +234,31 @@ status only. A rewrite that reads better and sounds like somebody else is a wors
 because this audience can hear the difference and the whole motion depends on sounding like a
 person who runs a business rather than a person who writes copy.
 
+### Email version, for Instantly
+
+Same copy, same voice. Subject lines carry the company variable; none of them carries the
+word AI, because `reference/outbound-engine.md` lists AI in a subject line as a hook pattern
+that does not work on this audience.
+
+Four subjects to test, spun:
+
+```
+October 15 {{at|for}} {{company name}}
+{{company name}} {{before|ahead of}} October 15
+{{AEP call volume|AEP prep|the AEP rush}} at {{company name}}
+{{a record AEP|a record-setting AEP|your biggest AEP}} for {{company name}}
+```
+
+Body, spun. 243 combinations:
+
+```
+{{first name}}, October 15 {{could kick off|could be the start of|could mark the start of}} {{a record AEP|a record-setting AEP|your biggest AEP}} for {{company name}}. AI can {{help you handle|help you take on|help you cover}} {{the increased call volume|the jump in call volume|the extra call volume}}. {{May I show you how?|Can I show you how?|Want me to show you how?}}
+```
+
+**Instantly uses the same double braces for variables and for spin**, so a variable must never
+sit inside a spin block. Nothing is spun that carries meaning: not the date, not the word AI,
+not the variables, and not the ask.
+
 ### If there is still no reply
 
 Stop at two. A third message on this channel converts almost nothing and costs the profile.
