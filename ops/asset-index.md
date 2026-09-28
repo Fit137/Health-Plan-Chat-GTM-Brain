@@ -67,7 +67,7 @@ including the counter-argument, kept on purpose.
 
 | Document | Covers |
 |---|---|
-| `ops/outbound-sop.md` | The end-to-end campaign playbook: ICP, Clay tables, enrichment, Instantly, HeyReach, measurement |
+| `ops/outbound-sop.md` | The end-to-end campaign playbook. Part I orientation, Part II the thirteen phases, Part III the Instantly and HeyReach manuals, Part IV twelve appendices. **Phase 1 is the angle, the only step a person decides.** |
 | `reference/job-signal-search.md` | Sourcing metadata and the prompt patterns the SOP calls |
 | `reference/plan-change-report.md` | What D3 is and how it is built |
 
