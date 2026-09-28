@@ -63,6 +63,14 @@ including the counter-argument, kept on purpose.
 | Sandbox environment | Manual, 72-hour turnaround |
 | CRM integration | Per-agency at onboarding |
 
+## Operating documents
+
+| Document | Covers |
+|---|---|
+| `ops/outbound-sop.md` | The end-to-end campaign playbook. Part I orientation, Part II the thirteen phases, Part III the Instantly and HeyReach manuals, Part IV twelve appendices. **Phase 1 is the angle, the only step a person decides.** |
+| `reference/job-signal-search.md` | Sourcing metadata and the prompt patterns the SOP calls |
+| `reference/plan-change-report.md` | What D3 is and how it is built |
+
 ## Channels
 
 | Channel | Status | Owner |

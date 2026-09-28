@@ -3,8 +3,11 @@
 Campaign A1. The highest-conversion motion in the library. Method:
 `reference/outbound-engine.md`.
 
-**Precondition, non-negotiable.** The Gap Report is run *before* the first touch. If it
-has not been run, this is not campaign A1 and this template does not apply.
+**Two forms of D3, and they run differently.** The main sequence below is the pre-run audit:
+twenty questions put to the agency's line before the first touch, and if it has not been run,
+this is not that sequence. The offered form, where the deliverable is a 2027 Plan Change
+Report built from the plans they tell us they sell, is the variant further down and is what runs
+cold at scale. Both are defined in `reference/plan-change-report.md`.
 
 **Qualify first.** 3–10 licensed agents, own inbound number, sells Medicare Advantage,
 and reachable — February to mid-September only.
@@ -39,8 +42,8 @@ Under 120 words. No attachment. No calendar link. No description of the product.
 
 ## Touch 2 — the rest of it, 4 days later
 
-Deliver the full Gap Report. No ask attached. One line: *"The whole thing, no strings.
-The section on after-hours is the one I'd read first."*
+Deliver the full audit. No ask attached. One line: *"The whole thing, no strings. The
+section on after-hours is the one I'd read first."*
 
 ## Touch 3 — the consequence, 5 days later
 
@@ -51,6 +54,290 @@ whether they want the same thing run against their own plan documents in a sandb
 
 Weeks remaining until 15 October, and what would have to be true by then. Close the loop
 politely if no reply.
+
+---
+
+## Variant — offered rather than pre-run
+
+**When this applies.** Email or LinkedIn, no enrichment on the row beyond the agency name,
+and the change report offered cold and built on reply. This is what runs at scale, and it
+carries no phone call, so nothing is spent on a prospect who does not answer.
+
+**What carries the message.** The September 30 letter deadline and the wave of calls behind
+it. Both are fixed CMS facts about the reader's own October, and neither needs a single field
+of enrichment to be true.
+
+### Touch 1 — the deliverable
+
+**Subject:** what changed on your plans for 2027
+
+```
+Your members get their Annual Notice of Change letters by September 30.
+The calls start the week after, and they are all the same call: what does
+this mean for me.
+
+Tell me which plans [Agency] sells and I'll read the 2027 Summary of
+Benefits against the 2026 version for each one. Every change, premium,
+copays, dental, the OTC card, network, with the page it came from. AI does
+the reading and I check it against the source.
+
+No charge, and you'll have it the week the documents land. Which plans
+should I run?
+
+[First name]
+```
+
+### Merge fields and the one computed value
+
+Two merge fields, both already on the contact record: `[Agency]` and `[First name]`.
+
+`[N]` is computed, not typed. Weeks between send date and 15 October, rounded to the
+nearest whole week. Hardcoding it puts a wrong number in the first line of every email sent
+after the first day, and a wrong date to this reader is the error only an outsider makes.
+Below two weeks, switch to days.
+
+### What changes downstream
+
+Touch 2 in the main sequence delivers the report. In this variant the report is delivered
+on the reply, so touch 2 becomes a second calendar touch that only fires where there was no
+reply. Touches 3 and 4 are unchanged.
+
+The reply is also where appointment setting belongs. `reference/outbound-engine.md` ranks
+"worth 15 minutes before AEP" third and permits it only once the prospect has engaged with a
+finding, and a reply asking for the audit is that engagement. It stays out of touch 1.
+
+### The claim to watch in this variant
+
+"I'll run" and "I'll put" are commitments, in the future tense, about work not yet done.
+That is accurate and it must stay that way. Any drift into "I run these for agencies" or
+"agencies I've audited" is a customer reference, and there are none.
+
+---
+
+## Variant — LinkedIn connection request, ICP-1 owner
+
+**Track note.** `reference/marketing-campaigns.md` routes ICP-1 owners found on LinkedIn into
+A1 rather than into B1, because B1 carries ICP-2 content. This is A1 content on the LinkedIn
+channel, which is allowed, and the rule that has to hold is the content one: no procurement,
+no security review, no downline language, ever, in this variant.
+
+**The hard limit is 300 characters, not words.** That is the LinkedIn connection note cap and
+it counts the merged agency name. Check the longest name in the table against it, not the
+average one: at 252 characters the message below still fits the longest name in a 997-row
+list with room to spare, and a message near 290 will truncate on the rows that matter.
+
+### The request
+
+260 characters against the longest agency name in the table. Check it against that name, not
+the average one, because this variant is close to the cap.
+
+```
+Hi [First name], there's a way to use AI on your inbound before October 15
+that answers what a caller's plan covers, not just picks up. I think it
+puts [Agency] well ahead of where it would otherwise land. Can I send you
+how?
+```
+
+### Alternate, contrast first
+
+269 characters. Leads on the distinction rather than arriving at it.
+
+```
+Hi [First name], most AI answers the phone. There's a way to use AI that
+answers what the caller's plan actually covers, and having it in before
+October 15 puts [Agency] well ahead of where it would otherwise land.
+Can I send you how?
+```
+
+### The eight words carrying the positioning
+
+"Answers what a caller's plan covers, not just picks up" is the whole competitive argument in
+plain English, and it is the clause that has to survive any edit.
+
+Without it the message offers AI on the inbound, which is what a $79 receptionist offers.
+`reference/feature-matrix.md` is unambiguous that anything a commodity assistant also does is
+not a story we can win on, and all six differentiators are Medicare plan IP. The contrast is
+not decoration on the value proposition, it **is** the value proposition, compressed.
+
+It also states our side of the distinction in `rules/glossary.md` that must never blur. We
+answer the beneficiary. Lead capture and agent-facing tools answer somebody else. A reader who
+takes "AI on your inbound" to mean call answering has put us in the wrong category before
+replying, and the clause is what prevents that.
+
+What it does not do is name a product, claim a customer, or promise a number, which is what
+keeps it sendable.
+
+### The A/B: two arms, one variable
+
+**Arm A.** Connection request carrying the note above.
+**Arm B.** Plain connection request, no note, message after acceptance.
+
+**Both arms then run the identical two-step sequence below.** That is the discipline the test
+depends on: change the request or change the sequence, never both, or the result cannot be
+attributed to either. Arm A recipients will read step one as a continuation of the note, which
+is fine and is part of what the arm is testing.
+
+**Measure replies per 100 requests sent, not reply rate among accepted.** A note lowers
+acceptance and can raise reply quality, so reply rate among those who accepted flatters Arm A
+by hiding everyone the note turned away. Record acceptance rate, reply rate and the compound
+number, and settle the test on the third.
+
+### Step 1, on acceptance. The offer
+
+The founder's wording. Do not rewrite it.
+
+```
+[First name], October 15 could kick off a record AEP for [Agency]. AI can
+help you handle the increased call volume. May I show you how?
+```
+
+Fallback, for when a variable fails to resolve. 123 characters, no variables.
+
+```
+October 15 could kick off a record AEP for your agency. AI can help you handle the increased call volume. May I show you how?
+```
+
+The fallback drops the name greeting rather than replacing it, and "your agency" stands in
+for the company name. Nothing else changes.
+
+### Step 2, four days later if no reply. Give it anyway
+
+```
+[First name],
+
+Following up on the above.
+
+Most AI that agencies get shown just picks up the phone and takes a
+message. It cannot tell a caller what the dental allowance is on their
+plan, because it has never read their plan.
+
+This one reads the Summary of Benefits for the plans you sell, so it
+answers from the carrier's own document, in your agency's name, at any
+hour. Anything it cannot answer goes to one of your licensed agents with
+the conversation attached.
+
+It is easier to show than to explain. Say when.
+```
+
+Ninety-four words, and not a reminder. Chasing a yes is asking twice for the same thing.
+
+Every capability named is SHIPPED in `rules/feature-status.md`: plan-grounded answers from
+ingested Summary of Benefits and Evidence of Coverage, 24/7 answering, agency-branded
+greeting, escalation with the conversation carried across. Appointment booking and Scope of
+Appointment capture are absent on purpose.
+
+### The voice rule for this sequence
+
+These are the founder's sentences. Plain compound statements, no lists of three, no dashes,
+no constructions that begin "there's a way to". Any future edit fixes grammar and claim
+status only. A rewrite that reads better and sounds like somebody else is a worse asset,
+because this audience can hear the difference and the whole motion depends on sounding like a
+person who runs a business rather than a person who writes copy.
+
+### Email version, for Instantly
+
+Same copy, same voice. Subject lines carry the company variable; none of them carries the
+word AI, because `reference/outbound-engine.md` lists AI in a subject line as a hook pattern
+that does not work on this audience.
+
+Four subjects to test. Every word sits inside a spin block:
+
+```
+{{October 15 at|October 15 for|Oct 15 at}} {{company name}}
+{{company name}} {{before October 15|ahead of October 15|before Oct 15}}
+{{AEP call volume at|AEP prep at|the AEP rush at}} {{company name}}
+{{a record AEP for|a record-setting AEP for|your biggest AEP for}} {{company name}}
+```
+
+Body, 729 combinations:
+
+```
+{{first name}}, {{October 15|Oct 15|October 15th}} {{could kick off|could be the start of|could mark the start of}} {{a record AEP for|a record-setting AEP for|your biggest AEP for}} {{company name}}. {{AI can help you handle|AI can help you take on|AI can help you cover}} {{the increased call volume|the jump in call volume|the extra call volume}}. {{May I show you how|Can I show you how|Want me to show you how}}?
+
+```
+
+**No punctuation inside a spin block, anywhere.** Instantly reads a block containing a comma,
+full stop or question mark as a variable name rather than as spin, and the template check
+fails on it whether the mark leads or trails. Two blocks written back to back with no space
+between them fail the same way.
+
+Every mark therefore sits outside: the comma after the first name, the two full stops, and
+the closing question mark. They are the only characters in the body not inside a block.
+
+The hyphen in "record-setting" is the one piece of punctuation left inside a block and it
+passes. If a warning ever names that block, the hyphen is the cause.
+
+**Meaning never moves.** AI appears in all three options of its block, AEP in all three of
+its, and the date varies only in format. Only the connective phrasing changes, so all 729
+renders say the same thing.
+
+**Instantly uses the same double braces for variables and for spin**, so a variable must never
+sit inside a spin block. Nothing is spun that carries meaning: not the date, not the word AI,
+not the variables, and not the ask.
+
+### If there is still no reply
+
+Stop at two. A third message on this channel converts almost nothing and costs the profile.
+Leave the row for the email sequence or for January.
+
+### The claim line this variant walks
+
+"Outlier results" as a promise is an outcome claim, and `ops/QA-checklist.md` requires every
+outcome number to be labelled as modelled and bars anything implying customers. There are
+none, so no version of this may say we have produced that result for anyone.
+
+What survives is the possibility and the method. **"I think it could be" is an opinion offered
+and "here is how" is a method sent**, and neither asserts a result we have delivered. Watch
+three drifts in any rewrite: "we help agencies" implies a book of them, "our clients see"
+invents one, and a number attached to the upside needs a unit, a date and the word modelled.
+
+The offer is also what to send. "How" is a written method for handling the inbound surge, not
+a call and not a demo. If it does not exist yet, it has to before this goes out, because the
+reply to this message asks for it immediately.
+
+### Where the deliverable goes
+
+Not in the request. Whatever they answer, the reply offers the 2027 change report, and only
+then does the plan list get asked for. Three steps, each one smaller than the last thing they
+agreed to.
+
+### Why it is built this way
+
+**It tells them something they do not know.** No owner knows in September exactly what moved
+on every plan in their book for next year, because the documents are only now publishing.
+That is what separates this from an audit score or a cheat sheet, both of which told the
+owner something they already believed.
+
+**The request asks a question rather than offering anything.** An offer in a connection note
+reads as a vendor whatever it contains. A question about the reader's own October reads as a
+peer, and it is answerable in a few words with nothing to look up.
+
+**The question does the revealing.** Naming what the calls actually are, one question about
+plan coverage, is the whole diagnosis. The owner supplies the rest themselves, because they
+already know how that fortnight goes.
+
+**"Staffing, or AI" is the point and it is not a pitch.** It presents two real options and
+asks which way they lean. `reference/outbound-engine.md` warns that this audience has been
+pitched AI weekly since 2023, and that warning is about being told. Being asked survives it,
+because the reader gets to hold the opinion.
+
+**Nothing to look up.** Acceptance and reply are separate decisions on this channel and the
+request has to survive both, so the answer has to be available without the reader leaving the
+message.
+
+**There is no company name and no capability.** Strip the sender and the note still makes
+sense, which is the test in `ops/QA-checklist.md`. A connection note that describes a product
+reads as a vendor and is declined before it is read.
+
+**"No pitch" does not appear.** Saying it is what pitching sounds like to this reader. Not
+pitching is the version that works.
+
+### On acceptance
+
+A connection note carrying the whole offer means the reply can come before the connection is
+accepted, and nothing is lost when it does not. Where the request is accepted with no reply,
+the first message after acceptance is touch 1 of the email sequence, unchanged. Do not open
+that message by thanking them for connecting.
 
 ---
 

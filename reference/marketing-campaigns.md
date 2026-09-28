@@ -11,7 +11,10 @@ Six, on a sliding scale of perceived value against ease of delivery. D3 is the s
 |---|---|---|---|---|
 | D1 | Medicare AI Readiness Scorecard | Medium | Very low | Communities, forums |
 | D2 | Missed-Call Revenue Calculator | Medium-high | Low | Paid traffic — the instant-payoff driver |
-| **D3** | **Benefit Answer Gap Report** | **8.6** | **6.7** | **Everywhere. The TOFU spine of both funnels** |
+| **D3** | **2027 Plan Change Report** | **8.6** | **6.7** | **Everywhere. The TOFU spine of both funnels** |
+
+What D3 is and how it is built: `reference/plan-change-report.md`. It replaced the Benefit
+Answer Gap Report as the primary form; the audit is retained there as a pre-run variant.
 | D4 | 72-Hour Plan Brain Sandbox | Very high | High | Stage 3, after qualification |
 | D5 | CMS AI Exposure Review | High | Medium | ICP-2 entry, and ICP-1 stage 4 |
 | D6 | AEP Peak-Load Stress Test | High | Very high | Industry events only |
@@ -32,7 +35,8 @@ Six, on a sliding scale of perceived value against ease of delivery. D3 is the s
 **ICP-1**
 
 - **A1 ★ Personalised cold outreach.** The highest-conversion motion. One Gap finding plus
-  a recording of their own line, sent before any ask. Founder-led.
+  a recording of their own line, sent before any ask. Founder-led. Sourcing spec:
+  `reference/job-signal-search.md`.
 - **A2 Agent communities and forums.** Facebook agent groups, Insurance Forums,
   agent-only Slack and Discord. D1 scorecard, ungated, vendor affiliation disclosed.
 - **A3 AEP prep webinar.** Aggregate audit findings as the substance.
