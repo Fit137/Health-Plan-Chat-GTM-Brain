@@ -70,6 +70,7 @@ including the counter-argument, kept on purpose.
 | `ops/outbound-sop.md` | The campaign playbook, matching the recorded video walkthrough step for step. Part I setup, Part II the fifteen steps, Part III Clay / Instantly / HeyReach detail, Part IV thirteen appendices. **Step 4 is the campaign concept, the only part left to the operator.** |
 | `reference/job-signal-search.md` | Sourcing metadata and the prompt patterns the SOP calls |
 | `reference/plan-change-report.md` | What D3 is and how it is built |
+| `ops/deliverables-ledger.md` | Every deliverable from Sprint 1 strategy through the Sprint 2 outbound build, with status and location. **Section 5 lists what is specified but not built.** |
 
 ## Channels
 
